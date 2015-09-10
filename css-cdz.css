@@ -1,0 +1,207 @@
+*{
+  /*font-family: calibri;*/
+  /*font-family: cursive;*/
+  font-family: Trebuchet,sans-serif;
+  /*font-family: Arial;*/
+}
+
+p{
+  /*font-size: 14px;*/
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px;
+}
+
+p table {
+  font-size: 14px;
+}
+.panel-title{
+  font-size: 13,5px;
+}
+
+/*tr{
+  padding: 30px;
+  margin: 30px;
+}*/
+
+.banner-cdz{
+  margin-bottom: 20px;
+}
+.banner-abs{
+  position: relative;
+}
+.titulo-batalha{
+  /*margin-left: 0px;*/
+  /*position: relative;*/
+  /*vertical-align: middle;*/
+  /*position: absolute;
+  top: 50%;*/
+  /*right: 50%;*/
+  /*vertical-align: middle;*/
+  position:absolute;
+  top:40%;
+  left:5%;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ccc;
+}
+.titulo-batalha h2{
+  font-size: 24px;
+}
+
+
+/*------------------------------------------*/
+.col-menos-padding{
+    padding-right: 0px;
+    padding-left: 0px;
+    /*align-items: baseline;*/
+
+}
+
+.gra-lutas-bronze .col-md-2{
+  /*margin: 0px 10px 0px 10px;*/
+  /*padding: 0px;*/
+  /*margin-right: 36px;*/
+  /*margin: 0px 15px;*/
+  /*display: block;*/
+
+  /*
+  margin auto e width precisam estar juntos
+  para centralizar os elementos
+  */
+  margin: 0 auto;
+  width: 20%;
+}
+.gm-panel-body{
+  padding: 20px 0px 0px 0px;
+}
+
+
+/*-----------------------------------------*/
+.banner-bronze{
+  height: 300px;
+  background-image: url(img/1bronze.jpg) ;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner-prata{
+  height: 300px;
+  /*background-image: url(img/saint_seiya_online_01_medio.jpg);*/
+  background-image: url(img/1prata2.jpg) ;
+  /*background-image: url(img/1prata3.png) ;*/
+  /*background-image: url(img/1prata4.jpg) ;*/
+  /*background-clip: padding-box;*/
+  background-position: center;
+  background-size: cover;
+}
+
+.banner-ouro{
+  height: 300px;
+  /*background-image: url(img/1ouro2.jpg) ;*/
+  background-image: url(img/1ouro.png) ;
+  background-position: center;
+  background-size: auto;
+
+  background-position: 0px -40px;
+  background-repeat: no-repeat;
+
+}
+
+.banner-marina{
+  height: 300px;
+  background-image: url(img/1marina.jpg) ;
+  background-position: center;
+  background-size: cover;
+}
+
+/*----------------- Paineis -------------*/
+.panel-cdz1{
+  /*background-color: #589cc7;*/
+  /*background-color: #1c4e6b;*/
+  background-color: #2d58a1;
+  /*background-color: #222;*/
+  /*background-color: #6D6D6D;*/
+  color : #fff;
+
+  background-image: url(img/background/ba-10.jpg) ;
+  /*opacity: 0.9;*/
+  background-position: 0px -250px;
+  background-size: cover;
+}
+
+/*.panel-cdz1, #rodada1 .panel-heading{
+  color : #fff;
+
+  background-image: url(img/background-02.jpeg) ;
+  opacity: 0.9;*/
+  /*background-position: 0px -180px;*/
+  /*background-size: cover;
+}*/
+
+
+/*----------- Css dos graficos------------*/
+.box {
+  margin: 0px auto;
+  width: 70%;
+}
+.box-chart {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.banner-capa{
+  padding-top: 50px;
+}
+.conteudo{
+  padding-top: 20px;
+}
+
+
+/*-------------- FOTOS ------------*/
+
+.totas-fotos{
+  /*padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 0px;*/
+
+  padding: 0px;
+  padding-top: 10px;
+
+}
+.fotos{
+  /*width: 100px;
+  margin: 5px auto;*/
+
+  margin: 0 auto;
+  width: 10%;
+
+  /*display: inline;*/
+  float: left;
+  /*position: relative;*/
+  /*padding: 0px;*/
+  /*margin-right: 14px;*/
+}
+.fotos p{
+  margin: 10px 0px 10px 0px;
+  line-height: 16px;
+
+  /*width: 100px;*/
+  /* para nao ter que usar br nos nomes*/
+
+}
+.fotos img{
+  width: 100px;
+}
+
+/*.clear { clear: both; }*/
+
+
+/*------------------- Rodapé --------------------*/
+.centro{
+  /*width: 100px;
+  margin: 0 auto;*/
+
+  text-align: center;
+}

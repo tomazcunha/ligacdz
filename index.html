@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <![endif]-->
+  <title>Free Multipurpose Template : RUMA</title>
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <!-- GOOGLE FONT -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+  <script src="assets/plugins/jquery-1.10.2.js"></script>
+  <script src="assets/plugins/bootstrap.js"></script>
+  <script src="graficos/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="css-cdz.css">
+
+  <script type="text/javascript">
+    var randomnb = function(){ return Math.round(Math.random()*300)};
+  </script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  <script src="graficos/g_bronze-r1.js"></script>
+  <script src="graficos/g_bronze-r2.js"></script>
+  <script>
+    // $(function () {
+    //   $('#myTab a:last').tab('show');
+    // })
+
+    $('#myTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+  </script>
+
+
+  <!-- http://www.highcharts.com/demo -->
+
+</head>
+<body >
+
+  <div class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CDZ - Liga do Zodiaco</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="bronze.html">Bronze</a></li>
+          <li><a href="prata.html">Prata</a></li>
+          <li><a href="ouro.html">Ouro</a></li>
+          <li><a href="gdeuses.html">G. Deuses</a></li>
+          <li><a href="marinas.html">Marinas</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!--/.NAVBAR END-->
+
+  <section id="home" class="text-center">
+
+    <!-- <div id="carousel-example" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="item active">
+
+          <img src="assets/img/1.jpg" alt="" />
+          <div class="carousel-caption" >
+            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/img/2.jpg" alt="" />
+          <div class="carousel-caption ">
+            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/img/3.jpg" alt="" />
+          <div class="carousel-caption ">
+            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
+          </div>
+        </div>
+      </div>
+
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example" data-slide-to="1"></li>
+        <li data-target="#carousel-example" data-slide-to="2"></li>
+      </ol>
+    </div> -->
+
+  </section>
+  <!--/.SLIDESHOW END-->
+
+  <section class="banner-capa">
+
+    <div class="container banner-cdz" >
+      <div class="row text-center">
+        <a href="bronze.html">
+          <div class="banner-bronze banner-abs">
+
+            <div class="titulo-batalha">
+              <h2>Herói de Bronze</h2>
+              <!-- <h4>Qual herói de</br> bronze é o mais forte?</h4> -->
+            </div>
+
+            <!-- <img src="img/maxresdefault.jpg" alt="" /> -->
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="container banner-cdz" >
+      <div class="row text-center">
+        <a href="prata.html">
+          <div class=" banner-prata banner-abs">
+
+              <div class="titulo-batalha">
+                <h2>Orgulho Prata</h2>
+                <!-- <h4>Qual herói de</br> bronze é o mais forte?</h4> -->
+              </div>
+
+            <!-- <img src="img/maxresdefault.jpg" alt="" /> -->
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="container banner-cdz" >
+      <div class="row text-center">
+        <a href="ouro.html">
+          <div class=" banner-ouro banner-abs">
+
+              <div class="titulo-batalha">
+                <h2>Lendário Dourado</h2>
+                <!-- <h4>Qual herói de</br> bronze é o mais forte?</h4> -->
+              </div>
+
+            <!-- <img src="img/maxresdefault.jpg" alt="" /> -->
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="container banner-cdz" >
+      <div class="row text-center">
+        <a href="marina.html">
+          <div class=" banner-marina banner-abs">
+
+              <div class="titulo-batalha">
+                <h2>Soberano dos Mares</h2>
+                <!-- <h4>Qual herói de</br> bronze é o mais forte?</h4> -->
+              </div>
+
+            <!-- <img src="img/maxresdefault.jpg" alt="" /> -->
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+
+
+<!-- CUSTOM SCRIPTS  -->
+<script src="assets/js/custom.js"></script>
+
+</body>
+</html>

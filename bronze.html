@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <![endif]-->
+  <title>Free Multipurpose Template : RUMA</title>
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <!-- GOOGLE FONT -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+  <script src="assets/plugins/jquery-1.10.2.js"></script>
+  <script src="assets/plugins/bootstrap.js"></script>
+  <script src="graficos/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="css-cdz.css">
+
+  <script type="text/javascript">
+    var randomnb = function(){ return Math.round(Math.random()*300)};
+  </script>
+
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  <script src="graficos/g_bronze-r1.js"></script>
+  <script src="graficos/g_bronze-r2.js"></script>
+
+  <script>
+    // $(function () {
+    //   $('#myTab a:last').tab('show');
+    // })
+
+    $('#myTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+  </script>
+
+
+
+
+</head>
+<body class="">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CDZ - Liga do Zodiaco</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="bronze.html">Bronze</a></li>
+          <li><a href="prata.html">Prata</a></li>
+          <li><a href="ouro.html">Ouro</a></li>
+          <li><a href="gdeuses.html">G. Deuses</a></li>
+          <li><a href="marinas.html">Marinas</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!--/.NAVBAR END-->
+
+  <section id="home" class="text-center">
+
+    <!-- <div id="carousel-example" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="item active">
+
+          <img src="assets/img/1.jpg" alt="" />
+          <div class="carousel-caption" >
+            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/img/2.jpg" alt="" />
+          <div class="carousel-caption ">
+            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/img/3.jpg" alt="" />
+          <div class="carousel-caption ">
+            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
+          </div>
+        </div>
+      </div>
+
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example" data-slide-to="1"></li>
+        <li data-target="#carousel-example" data-slide-to="2"></li>
+      </ol>
+    </div> -->
+
+  </section>
+  <!--/.SLIDESHOW END-->
+
+<section class="banner-capa">
+  <div class="container" >
+    <div class="row text-center">
+      <div class=" banner-bronze">
+        <!-- <img src="img/maxresdefault.jpg" alt="" /> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="conteudo">
+  <div class="container">
+    <div class="row text-center" >
+
+      <div class="pane ">
+        <div class="panel-heading panel-cdz1">
+          <h3 class="panel-title">Bronze</h3>
+        </div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#rodada1" aria-controls="rodada1" role="tab" data-toggle="tab">1ª Rodada</a></li>
+          <li role="presentation"><a href="#rodada2" aria-controls="rodada2" role="tab" data-toggle="tab">2ª Rodada</a></li>
+          <li role="presentation"><a href="#rodada3" aria-controls="rodada3" role="tab" data-toggle="tab">3ª Rodada</a></li>
+          <li role="presentation"><a href="#rodada4" aria-controls="rodada4" role="tab" data-toggle="tab">4ª Rodada</a></li>
+          <li role="presentation"><a href="#rodadageral" aria-controls="rodadageral" role="tab" data-toggle="tab">Geral</a></li>
+        </ul>
+
+        <!-- Rodadas - Tab panes -->
+        <div class="tab-content ">
+
+          <!-- Primera -->
+          <div role="tabpanel" class="tab-pane active" id="rodada1">
+            <div class="panel-body">
+
+              <!-- Fotos dos cavaleiros -->
+              <div class="row">
+                <div class="col-md-12 col-menos-padding ">
+                  <div class="panel panel-default container totas-fotos ">
+
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/BAN.jpg" alt="Ban" class="img-rounded">
+                      <p>Ban de Leão Menor</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/geki.jpg" alt="Geki" class="img-rounded">
+                      <p>Geki de Urso</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/ICHI.jpg" alt="..." class="img-rounded">
+                      <p>Ichi de Hidra</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/IKKI.jpg" alt="..." class="img-rounded">
+                      <p>Ikki de Fênix</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/JABU.jpg" alt="..." class="img-rounded">
+                      <p>Jabu de Unicórnio</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/nachi.jpg" alt="..." class="img-rounded">
+                      <p>Nachi de Lobo</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/SEYA.jpg" alt="..." class="img-rounded">
+                      <p>Seiya de Pégaso</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/shiryu.jpg" alt="..." class="img-rounded">
+                      <p>Shiryu de Dragão</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/shun.jpg" alt="..." class="img-rounded">
+                      <p>Shun de Andrômeda</p>
+                    </div>
+
+                    <div class="fotos ">
+                      <img src="img/Liga_do_Zodiaco/Bronze/yoga.jpg" alt="..." class="img-rounded">
+                      <p>Hyoga de Cisne</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Linha com os graficos grandes -->
+              <div class="row">
+                <div class="col-md-12 col-menos-padding">
+                  <div class="row ">
+                    <div class="col-md-12 col-menos-padding">
+
+                        <div class="col-md-6">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Pontos | Votos</h3>
+                            </div>
+                            <div class="panel-body">
+                              <div id="container_bz_r1_g1" style="min-width: 140px; max-width: auto; height: 500px; margin: 0 auto"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Saldo de Cosmo</h3>
+                            </div>
+                            <div class="panel-body">
+                              <div id="container_bz_r1_g2" style="min-width: 140px; max-width: 800px; height: 500px; margin: 0 auto"></div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Graficos menores -->
+              <div class="row">
+                <div class="col-md-12 col-menos-padding gra-lutas-bronze">
+                  <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Primeira Rodada</h3>
+                    </div>
+                    <div class="panel-body">
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Seiya vs Ikki</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_bz_r1_g1m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Nachi vs Jabu</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_br_r1_g2m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Geki vs Ichi</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_br_r1_g3m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Shiryu vs Hyoga</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_br_r1_g4m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Ban vs Shun</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_br_r1_g5m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Primeira Rodada -->
+              <div class="row">
+                <div class="col-md-12 col-menos-padding gra-lutas-bronze">
+                  <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Primeira Rodada</h3>
+                    </div>
+                    <div class="panel-body">
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Seiya vs Ikki</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_bz_r1_g1m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Nachi vs Jabu</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_br_r1_g2m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Geki vs Ichi</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_br_r1_g3m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Shiryu vs Hyoga</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_br_r1_g4m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Ban vs Shun</h3>
+                          </div>
+                          <div class="panel-body">
+                            <div id="container_br_r1_g5m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Linha com as tabelas -->
+              <div class="row">
+                <div class="col-md-12 col-menos-padding">
+                  <div class="panel panel-default">
+
+                    <table class="table table-condensed table-striped table-hover">
+                      <tr>
+                        <th>Posição</th>
+                        <th>Foto</th>
+                        <th>Cavaleiro</th>
+                        <th>Lutas</th>
+                        <th>Pontos</th>
+                        <th>Vt. Favor</th>
+                        <th>Vt. Contra</th>
+                        <th>Saldo de Cosmo</th>
+                      </tr>
+                      <tr>
+                        <td>1º</td>
+                        <td></td>
+                        <td>Shun de Andrômeda</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>31</td>
+                        <td>5</td>
+                        <td>26</td>
+                      </tr>
+                      <tr>
+                        <td>2º</td>
+                        <td></td>
+                        <td>Jabu de Unicórnio</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>28</td>
+                        <td>5</td>
+                        <td>23</td>
+                      </tr>
+                      <tr>
+                        <td>3º</td>
+                        <td></td>
+                        <td>Ikki de Fênix</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>24</td>
+                        <td>7</td>
+                        <td>17</td>
+                      </tr>
+                      <tr>
+                        <td>4º</td>
+                        <td></td>
+                        <td>Geki de Urso</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>19</td>
+                        <td>13</td>
+                        <td>6</td>
+                      </tr>
+                      <tr>
+                        <td>5º</td>
+                        <td></td>
+                        <td>Hyoga de Cisne</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>20</td>
+                        <td>16</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>6º</td>
+                        <td></td>
+                        <td>Shiryu de Dragão</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>16</td>
+                        <td>20</td>
+                        <td>-4</td>
+                      </tr>
+                      <tr>
+                        <td>7º</td>
+                        <td></td>
+                        <td>Ichi de Hidra</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>13</td>
+                        <td>19</td>
+                        <td>-6</td>
+                      </tr>
+                      <tr>
+                        <td>8º</td>
+                        <td></td>
+                        <td>Seiya de Pégaso</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>7</td>
+                        <td>24</td>
+                        <td>-17</td>
+                      </tr>
+                      <tr>
+                        <td>9º</td>
+                        <td></td>
+                        <td>Nachi de Lobo</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>5</td>
+                        <td>28</td>
+                        <td>-23</td>
+                      </tr>
+                      <tr>
+                        <td>10º</td>
+                        <td></td>
+                        <td>Ban de Leão Menor</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>5</td>
+                        <td>31</td>
+                        <td>-26</td>
+                      </tr>
+                    </table>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- SUPER LIGA GALÁCTICA
+              Dando uma pausa aos Concursos “QUERIDINHO”, estou apresentando a SUPER LIGA GALÁCTICA. Mudando o foco, o objetivo agora é definir quem é o “mais poderoso”! Só que desta vez estou propondo um sistema diferenciado de pontuação, similar ao Campeonato Brasileiro de Futebol. Todos os 10 Cavaleiros de Bronze que participaram da Guerra Galáctica, se enfrentarão entre si em nove rodadas consecutivas. O regramento é simples: a cada batalha divulgada aqui no grupo, opte por aquele Cavaleiro que é o mais poderoso em sua opinião! A pontuação será atribuída seguindo os seguintes critérios:
+              Vitória = 3 pontos para o vencedor
+              Empate = 1 ponto para ambos
+              Derrota = 0 pontos para o perdedor
+              INTERPRETAÇÃO TABELA DE CLASSIFICAÇÃO
+              LUTAS = Combates finalizados
+              PONTOS = Pontuação acumulada
+              VF = Votos à Favor (similar aos gols a favor em uma partida de futebol)
+              VC = Votos Contra (similar aos gols sofridos em uma partida de futebol)
+              SC = Saldo de Cosmo (diferença entre GP e GC, similar ao saldo de gols em um campeonato de futebol).
+              CRITÉRIOS DE DESEMPATE:
+              1º PONTOS
+              2º SC
+              3º VF
+              4º Confronto Direto
+              Por dia serão lançadas cinco lutas (uma rodada) e a votação se encerrará sempre ao
+              MEIO-DIA DO DIA SEGUINTE, quando então será lançada a próxima rodada de lutas,
+              até que todos os Cavaleiros tenham se enfrentado. Fiquem ligados aqui no grupo
+              para o lançamento das lutas. -->
+            </div>
+
+          </div>
+
+
+          <!-- Segunda Rodada -->
+          <div role="tabpanel" class="tab-pane" id="rodada2">
+            <div class="panel-body">
+
+              <div class="row">
+                <div class="col-md-12 col-menos-padding">
+                  <div class="panel panel-default">
+
+                    <p>Barra de pontos</p>
+                    <p>Barra de Vt. Favor</p>
+                    <p>Barra de Vt. Contra</p>
+                    <p>Saldo de Cosmo</p>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 col-menos-padding">
+                  <div class="panel panel-default">
+
+                    <p>
+                      algo
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 col-menos-padding">
+                  <div class="panel panel-default">
+
+                    <p>
+                      Tabelas
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-2">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Jabu vs Geki</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div id="container_bz_r2_g1m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Hyoga vs Ban</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div id="container_br_r2_g2m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Shun vs Ikki</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div id="container_br_r2_g3m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Ichi vs Shiryu</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div id="container_br_r2_g4m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Seiya vs Nachi</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div id="container_br_r2_g5m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <table class="table table-condensed table-striped">
+                <tr>
+                  <th>Posição</th>
+                  <th>Foto</th>
+                  <th>Cavaleiro</th>
+                  <th>Lutas</th>
+                  <th>Pontos</th>
+                  <th>Vt. Favor</th>
+                  <th>Vt. Contra</th>
+                  <th>Saldo de Cosmo</th>
+                </tr>
+                <tr>
+                  <td>1º</td>
+                  <td></td>
+                  <td>Jabu de Unicórnio</td>
+                  <td>2</td>
+                  <td>6</td>
+                  <td>55</td>
+                  <td>13</td>
+                  <td>42</td>
+                </tr>
+                <tr>
+                  <td>2º</td>
+                  <td></td>
+                  <td>Hyoga de Cisne</td>
+                  <td>2</td>
+                  <td>6</td>
+                  <td>45</td>
+                  <td>21</td>
+                  <td>24</td>
+                </tr>
+                <tr>
+                  <td>3º</td>
+                  <td></td>
+                  <td>Shun de Andrômeda</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>53</td>
+                  <td>27</td>
+                  <td>26</td>
+                </tr>
+                <tr>
+                  <td>4º</td>
+                  <td></td>
+                  <td>Ikki de Fênix</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>46</td>
+                  <td>29</td>
+                  <td>17</td>
+                </tr>
+                <tr>
+                  <td>5º</td>
+                  <td></td>
+                  <td>Shiryu de Dragão</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>45</td>
+                  <td>28</td>
+                  <td>17</td>
+                </tr>
+                <tr>
+                  <td>6º</td>
+                  <td></td>
+                  <td>Seiya de Pégaso</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>33</td>
+                  <td>32</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>7º</td>
+                  <td></td>
+                  <td>Geki de Urso</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>27</td>
+                  <td>40</td>
+                  <td>-13</td>
+                </tr>
+                <tr>
+                  <td>8º</td>
+                  <td></td>
+                  <td>Ichi de Hidra</td>
+                  <td>2</td>
+                  <td>0</td>
+                  <td>21</td>
+                  <td>48</td>
+                  <td>-27</td>
+                </tr>
+                <tr>
+                  <td>9º</td>
+                  <td></td>
+                  <td>Nachi de Lobo</td>
+                  <td>2</td>
+                  <td>0</td>
+                  <td>13</td>
+                  <td>54</td>
+                  <td>-41</td>
+                </tr>
+                <tr>
+                  <td>10º</td>
+                  <td></td>
+                  <td>Ban de Leão Menor</td>
+                  <td>2</td>
+                  <td>0</td>
+                  <td>10</td>
+                  <td>56</td>
+                  <td>-46</td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+          <div role="tabpanel" class="tab-pane" id="rodada3">
+            <p>
+              RESULTADOS DA 3ª RODADA DA “SUPER LIGA GALÁCTICA”
+
+              Shun de Andrômeda 19 x 26 Hyoga de Cisne
+              Geki de Urso 18 x 22 Seiya de Pégaso
+              Shiryu de Dragão 26 x 21 Jabu de Unicórnio
+              Ban de Leão Menor 18 x 25 Ichi de Hidra
+              Nachi de Lobo 13 x 31 Ikki de Fênix
+
+            </p>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="rodada4">
+            <p>
+              RESULTADOS DA 4ª RODADA DA “SUPER LIGA GALÁCTICA”
+
+              Jabu de Unicórnio 33 x 10 Ban de Leão Menor
+              Ichi de Hidra 10 x 35 Shun de Andrômeda
+              Ikki de Fênix 31 x 23 Hyoga de Cisne
+              Nachi de Lobo 35 x 31 Geki de Urso
+              Seiya de Pégaso 30 x 50 Shiryu de Dragão
+            </p>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="rodada5">...rodada5</div>
+          <div role="tabpanel" class="tab-pane" id="rodada6">...rodada6</div>
+          <div role="tabpanel" class="tab-pane" id="rodadageral">
+            <p>Soma Geral em Linha de pontos</p>
+            <p>Soma Geral em Linha de Vt. Favor</p>
+            <p>Soma Geral em Linha de Vt. Contra</p>
+            <p>Soma Geral em Linha Saldo de Cosmo</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section id="intro">
+  <div class="container">
+    <div class="row text-center" >
+      <div class="col-md-12">
+        <div class="row text-center pad-row  ">
+
+          <div class="col-md-4 col-sm-4 ">
+            <img class="img-circle" src="assets/img/team1.png" alt="" />
+            <h3><strong>Jhon Deo Alex</strong> </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="btn btn-primary" >Read Details</a>
+          </div>
+
+          <div class="col-md-4 col-sm-4 ">
+            <img class="img-circle" src="assets/img/team2.jpg" alt="" />
+            <h3><strong>Jhon Deo Alex</strong> </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="btn btn-primary" >Read Details</a>
+          </div>
+
+          <div class="col-md-4 col-sm-4" >
+            <div class="alert alert-success">
+              <div class="skill-name">CLIENT SATISFACTION 100%</div>
+              <div class="progress progress-striped active progress-adjust">
+                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                  <span class="sr-only">100% Complete</span>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-danger">
+              <div class="skill-name">PERFORMANCE DELIVERED 100%</div>
+              <div class="progress progress-striped active progress-adjust">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                  <span class="sr-only">100% Complete</span>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-info">
+              <div class="skill-name">DELIVERY DONE 100%</div>
+              <div class="progress progress-striped active progress-adjust">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                  <span class="sr-only">100% Complete</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!--/.INTRO END-->
+<!--
+<section id="offer"  >
+  <div class="container">
+    <div class="row   alert alert-info" >
+      <div class="col-md-8 col-sm-8">
+        <h1>  Download Deatils Now For Latest Offers</h1>
+      </div>
+      <div class="col-md-4 col-sm-4" style="padding-top: 15px;">
+        <a href="#" class=" btn btn-primary btn-lg">GRAB IT HERE NOW</a>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+
+<!--/.OFFFER END-->
+<!--
+<section id="just-intro">
+  <div class="container">
+    <div class="row text-center pad-row">
+      <div class="col-md-4  col-sm-4">
+        <i class="fa fa-desktop fa-5x"></i>
+        <h4> <strong>Sure Quique Menu</strong> </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <a href="#" class="btn btn-primary" >Read Details</a>
+      </div>
+      <div class="col-md-4  col-sm-4">
+        <i class="fa fa-flask  fa-5x"></i>
+        <h4> <strong>Sure Quique Menu</strong> </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <a href="#" class="btn btn-primary" >Read Details</a>
+      </div>
+      <div class="col-md-4  col-sm-4">
+        <i class="fa fa-pencil  fa-5x"></i>
+        <h4> <strong>Sure Quique Menu</strong> </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <a href="#" class="btn btn-primary" >Read Details</a>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+<!--/.JUST-INTRO END-->
+
+<!--
+<section  class="note-sec" >
+
+  <div class="container">
+    <div class="row text-center pad-row" >
+      <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 ">
+        <i class="fa fa-quote-left fa-3x"></i>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section> -->
+<!--/.NOTE END-->
+<!--
+<section id="clients"  >
+
+
+  <div class="container">
+    <div class="row text-center pad-bottom" >
+      <div class="col-md-12">
+        <img src="assets/img/clients.png" alt="" class="img-responsive" />
+      </div>
+
+    </div>
+  </div>
+</section> -->
+<!--/.CLIENTS END-->
+
+<section id="footer-sec" >
+
+  <div class="container">
+    <div class="row  pad-bottom" >
+      <div class="col-md-4">
+
+
+      </div>
+
+      <div class="col-md-4">
+        <!-- <h4> <strong>Cavaleiros</strong> </h4>
+        <p>
+          <a href="#"><i class="fa fa-facebook-square fa-3x"  ></i></a>
+          <a href="#"><i class="fa fa-twitter-square fa-3x"  ></i></a>
+          <a href="#"><i class="fa fa-linkedin-square fa-3x"  ></i></a>
+          <a href="#"><i class="fa fa-google-plus-square fa-3x"  ></i></a>
+        </p> -->
+        <h4><strong><a href="#" >VOLTAR AO TOPO</a></strong></h4>
+
+        <p><strong><a href="#" >Bronze</a></strong></p>
+        <p><strong><a href="#" >Prata</a></strong></p>
+        <p><strong><a href="#" >Ouro</a></strong></p>
+        <p><strong><a href="#" >G.al Marina</a></strong></p>
+
+      </div>
+
+      <div class="col-md-4">
+        <!-- <h4> <strong>OUR LOCATION</strong> </h4>
+        <p>
+          234/JK , The Wondre Land, <br />
+          Newyork Street Junction  <br />
+          JUST USA -10909094
+        </p>
+        <a href="#" class="btn btn-primary" >SEND QUERY</a> -->
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--/.FOOTER END-->
+
+<!-- CUSTOM SCRIPTS  -->
+<script src="assets/js/custom.js"></script>
+
+</body>
+</html>
