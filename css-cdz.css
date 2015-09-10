@@ -12,9 +12,10 @@ p{
   margin: 0px;
 }
 
-p table {
+/*Não está modificando nada*/
+/*p table {
   font-size: 14px;
-}
+}*/
 .panel-title{
   font-size: 13,5px;
 }
@@ -23,6 +24,46 @@ p table {
   padding: 30px;
   margin: 30px;
 }*/
+
+.tabela_dados table{
+  /*margin-top: 10px;*/
+  margin-bottom: 0px;
+}
+
+/*.tabela_dados .nav-pills > li.active > a{
+  background-color: black;
+}*/
+
+
+.botao_tabela > .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+  background-color: #696969;
+  color: #FFF;
+}
+
+.botao_tabela > .nav > li > a{
+  /*display: inline;*/
+  /*color: #000;*/
+  color: inherit;
+}
+
+.botao_tabela{
+
+}
+
+
+/*.tabela_dados .nav-pills > li.active > a{
+  background-color: black;
+}*/
+/*.tabela_dados .nav-pills > li.active > a:hover{
+  background-color: yellow;
+}
+.tabela_dados .nav-pills > li.active > a:focus{
+  background-color: green;
+}*/
+
+
+
+/*-------------------------------------------------------*/
 
 .banner-cdz{
   margin-bottom: 20px;
