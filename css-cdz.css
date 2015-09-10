@@ -30,11 +30,6 @@ p{
   margin-bottom: 0px;
 }
 
-/*.tabela_dados .nav-pills > li.active > a{
-  background-color: black;
-}*/
-
-
 .botao_tabela > .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
   background-color: #696969;
   color: #FFF;
@@ -45,22 +40,6 @@ p{
   /*color: #000;*/
   color: inherit;
 }
-
-.botao_tabela{
-
-}
-
-
-/*.tabela_dados .nav-pills > li.active > a{
-  background-color: black;
-}*/
-/*.tabela_dados .nav-pills > li.active > a:hover{
-  background-color: yellow;
-}
-.tabela_dados .nav-pills > li.active > a:focus{
-  background-color: green;
-}*/
-
 
 
 /*-------------------------------------------------------*/
