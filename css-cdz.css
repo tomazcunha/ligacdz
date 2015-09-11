@@ -159,6 +159,15 @@ p{
   /*background-size: cover;
 }*/
 
+.lutas_head .panel-heading{
+  background-color: #fff;
+  padding: 5px 10px;
+}
+.lutas_head h3{
+
+  font-size: 12px;
+}
+
 
 /*----------- Css dos graficos------------*/
 .box {

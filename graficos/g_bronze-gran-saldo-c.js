@@ -3,7 +3,10 @@
 $(function () {
   Highcharts.setOptions({
      colors: ['#7124BC', ]
-    //  azul, vermelho, verde,
+      // vermelho FF4D4C,
+      // verde 24BC25,
+      // azul 7473F2,
+      // roxo 7124BC
     });
 
 

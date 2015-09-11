@@ -2,12 +2,15 @@
 
 $(function () {
   Highcharts.setOptions({
-     colors: ['#FF4D4C', '#24BC25', ]
-    //  vermelho, verde,
+     colors: ['#FF4D4C', ]
+    // vermelho FF4D4C,
+    // verde 24BC25,
+    // azul 7473F2,
+    // roxo 7124BC
     });
 
   // ==================== Votos ====================================================
-  $('#container_bz_g1').highcharts({
+  $('#container_bz_voto_c').highcharts({
           chart: {
               type: 'bar'
           },
@@ -61,10 +64,6 @@ $(function () {
           {
             name: 'Votos Contra',
             data: votos_c
-          },
-          {
-            name: 'Votos Favor',
-            data: votos_f
           },
         ],
 
