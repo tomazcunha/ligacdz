@@ -37,20 +37,47 @@
     var randomnb = function(){ return Math.round(Math.random()*300)};
   </script>
 
+  <script type="text/javascript">
+    var chart,
+            categories = [
+              'Ban de Leão Menor',
+              'Geki de Urso',
+              'Hyoga de Cisne',
+              'Ichi de Hidra',
+              'Ikki de Fênix',
+              'Jabu de Unicórnio',
+              'Nachi de Lobo',
+              'Seiya de Pégaso',
+              'Shiryu de Dragão',
+              'Shun de Andrômeda'
+              ];
+
+      var pontos  = [0, 3, 9, 3, 10, 9, 3, 6, 9, 7];
+      var votos_f = [38, 76, 94, 56, 108, 109, 61, 85, 121, 107];
+      var votos_c = [114, 97, 71, 101, 65, 49, 116, 100, 79, 63];
+      var saldo_c = [-76, -21, 23, -45, 43, 60, -55, -15, 42, 44];
+
+  </script>
+
+  <!-- Highcharts -->
   <script src="http://code.highcharts.com/highcharts.js"></script>
   <script src="http://code.highcharts.com/modules/exporting.js"></script>
-
   <script src="assets/js/highcharts/highcharts.js"></script>
   <script src="assets/js/highcharts/exporting.js"></script>
 
+  <!-- Meus Highcharts -->
+  <script src="graficos/g_bronze-gran-pontos.js"></script>
+  <script src="graficos/g_bronze-gran-saldo-c.js"></script>
+  <script src="graficos/g_bronze-gran-votos.js"></script>
   <script src="graficos/g_bronze-r1.js"></script>
   <script src="graficos/g_bronze-r2.js"></script>
-  <script src="graficos/g_bronze-r2.js"></script>
+  <!--
+  <script src="graficos/g_bronze-r2.js"></script> -->
 
-  <!--  -->
+
+  <!-- Jquery do Highcharts e DataTables -->
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
-
   <script src="assets/plugins/jquery.dataTables.min.js"></script>
 
   <script>
@@ -272,13 +299,31 @@
                   <div class="row ">
                     <div class="col-md-12 col-menos-padding">
 
+                        <div class="col-md-12">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Votos</h3>
+                            </div>
+                            <div class="panel-body">
+                              <div id="container_bz_g1" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+                  </div>
+
+
+                  <div class="row ">
+                    <div class="col-md-12 col-menos-padding">
+
                         <div class="col-md-6">
                           <div class="panel panel-default">
                             <div class="panel-heading">
-                              <h3 class="panel-title">Pontos | Votos</h3>
+                              <h3 class="panel-title">Pontos</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_r1_g1" style="min-width: 140px; max-width: auto; height: 500px; margin: 0 auto"></div>
+                              <div id="container_bz_g3" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -289,14 +334,14 @@
                               <h3 class="panel-title">Saldo de Cosmo</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_r1_g2" style="min-width: 140px; max-width: 800px; height: 500px; margin: 0 auto"></div>
+                              <div id="container_bz_g2" style="min-width: 140px; max-width: 800px; height: 350px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
 
-
                     </div>
                   </div>
+
                 </div>
               </div>
 
@@ -318,7 +363,7 @@
                             <h3 class="panel-title">Jabu vs Geki</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_bz_r2_g1m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_bz_r2_g1m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -329,7 +374,7 @@
                             <h3 class="panel-title">Hyoga vs Ban</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_br_r2_g2m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_br_r2_g2m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -340,7 +385,7 @@
                             <h3 class="panel-title">Shun vs Ikki</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_br_r2_g3m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_br_r2_g3m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -351,7 +396,7 @@
                             <h3 class="panel-title">Ichi vs Shiryu</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_br_r2_g4m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_br_r2_g4m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -362,7 +407,7 @@
                             <h3 class="panel-title">Seiya vs Nachi</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_br_r2_g5m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_br_r2_g5m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -391,7 +436,7 @@
                             <h3 class="panel-title">Seiya vs Ikki</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_bz_r1_g1m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_bz_r1_g1m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -402,7 +447,7 @@
                             <h3 class="panel-title">Nachi vs Jabu</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_br_r1_g2m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_br_r1_g2m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -413,7 +458,7 @@
                             <h3 class="panel-title">Geki vs Ichi</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_br_r1_g3m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_br_r1_g3m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -424,7 +469,7 @@
                             <h3 class="panel-title">Shiryu vs Hyoga</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_br_r1_g4m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_br_r1_g4m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
@@ -435,7 +480,7 @@
                             <h3 class="panel-title">Ban vs Shun</h3>
                           </div>
                           <div class="panel-body">
-                            <div id="container_br_r1_g5m" style="min-width: 140px; max-width: 800px; height: 150px; margin: 0 auto"></div>
+                            <div id="container_br_r1_g5m" style="min-width: 140px; max-width: 800px; height: 125px; margin: 0 auto"></div>
                           </div>
                         </div>
                       </div>
