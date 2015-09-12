@@ -57,7 +57,7 @@ p{
   background-color: #696969;
   color: #FFF;
   border-color: #696969;
-
+  font-size: 14px;
 }
 
 
@@ -196,6 +196,10 @@ p{
 .lutas_head{
   /*nao preciso mais */
   /*padding-bottom: 0px;*/
+}
+
+.panel_head_alt .panel-heading{
+  padding: 5px 10px;
 }
 
 
