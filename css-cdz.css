@@ -268,3 +268,13 @@ p{
 
   text-align: center;
 }
+
+.foto_rodape{
+  background-image: url(img/background-02.jpeg) ;
+  opacity: 0.5;
+
+  /*background-position: center;*/
+  background-position: 0px -200px;
+  background-size: cover;
+
+}
