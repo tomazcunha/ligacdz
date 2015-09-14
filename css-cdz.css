@@ -154,6 +154,19 @@ p{
 
 }
 
+.banner-asgard{
+  height: 300px;
+  /*background-image: url(img/1ouro2.jpg) ;*/
+  background-image: url(img/Asgard.png) ;
+  background-position: center;
+  background-size: auto;
+
+  background-position: 0px -60px;
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
+
+}
+
 .banner-marina{
   height: 300px;
   background-image: url(img/1marina.jpg) ;
