@@ -140,6 +140,7 @@ p{
   /*background-clip: padding-box;*/
   background-position: center;
   background-size: cover;
+  background-position: 0px -265px;
 }
 
 .banner-ouro{

@@ -7,7 +7,7 @@ $(function () {
 
 
   // ==================== Graficos menores ======================================================
-  $('#container_bz_r3_g1m').highcharts({
+  $('#container_bz_r4_g1m').highcharts({
       chart: {
           type: 'bar'
       },
@@ -58,142 +58,18 @@ $(function () {
           enabled: false
       },
       series: [{
-          name: [r3_cav[0]],
-          data: [r3_vot[0]]
-      }, {
-        name: [r3_cav[1]],
-        data: [r3_vot[1]]
-      }],
-      exporting: {
-            enabled: false
-        }
-  });
-
-  $('#container_br_r3_g2m').highcharts({
-      chart: {
-          type: 'bar'
-      },
-      title: {
-          text: ''
-      },
-      subtitle: {
-          text: '<a href="#"></a>'
-      },
-      xAxis: {
-          categories: [''],
-          title: {
-              text: null
-          }
-      },
-      yAxis: {
-          min: 0,
-          title: {
-              text: 'Votos',
-              align: 'high'
-          },
-          labels: {
-              overflow: 'justify'
-          }
-      },
-      tooltip: {
-          valueSuffix: ' votos'
-      },
-      plotOptions: {
-          bar: {
-              dataLabels: {
-                  enabled: true
-              }
-          }
-      },
-      legend: {
-          layout: 'vertical',
-          align: 'left',
-          verticalAlign: 'bottom',
-          x: -7,
-          y: 17,
-          floating: true,
-          borderWidth: 0,
-          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-          shadow: false
-      },
-      credits: {
-          enabled: false
-      },
-      series: [{
-          name: 'Geki',
-          data: [18]
-      }, {
-          name: 'Seiya',
-          data: [22]
-      }],
-      exporting: {
-            enabled: false
-        }
-  });
-
-  $('#container_br_r3_g3m').highcharts({
-      chart: {
-          type: 'bar'
-      },
-      title: {
-          text: ''
-      },
-      subtitle: {
-          text: '<a href="#"></a>'
-      },
-      xAxis: {
-          categories: [''],
-          title: {
-              text: null
-          }
-      },
-      yAxis: {
-          min: 0,
-          title: {
-              text: 'Votos',
-              align: 'high'
-          },
-          labels: {
-              overflow: 'justify'
-          }
-      },
-      tooltip: {
-          valueSuffix: ' votos'
-      },
-      plotOptions: {
-          bar: {
-              dataLabels: {
-                  enabled: true
-              }
-          }
-      },
-      legend: {
-          layout: 'vertical',
-          align: 'left',
-          verticalAlign: 'bottom',
-          x: -7,
-          y: 17,
-          floating: true,
-          borderWidth: 0,
-          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-          shadow: false
-      },
-      credits: {
-          enabled: false
-      },
-      series: [{
-          name: 'Shiryu',
-          data: [26]
-      }, {
           name: 'Jabu',
-          data: [21]
+          data: [33]
+      }, {
+        name: 'Ban',
+        data: [10]
       }],
       exporting: {
             enabled: false
         }
   });
 
-  $('#container_br_r3_g4m').highcharts({
+  $('#container_br_r4_g2m').highcharts({
       chart: {
           type: 'bar'
       },
@@ -244,18 +120,80 @@ $(function () {
           enabled: false
       },
       series: [{
-          name: 'Ban',
-          data: [18]
-      }, {
           name: 'Ichi',
-          data: [25]
+          data: [10]
+      }, {
+          name: 'Shun',
+          data: [35]
       }],
       exporting: {
             enabled: false
         }
   });
 
-  $('#container_br_r3_g5m').highcharts({
+  $('#container_br_r4_g3m').highcharts({
+      chart: {
+          type: 'bar'
+      },
+      title: {
+          text: ''
+      },
+      subtitle: {
+          text: '<a href="#"></a>'
+      },
+      xAxis: {
+          categories: [''],
+          title: {
+              text: null
+          }
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Votos',
+              align: 'high'
+          },
+          labels: {
+              overflow: 'justify'
+          }
+      },
+      tooltip: {
+          valueSuffix: ' votos'
+      },
+      plotOptions: {
+          bar: {
+              dataLabels: {
+                  enabled: true
+              }
+          }
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'bottom',
+          x: -7,
+          y: 17,
+          floating: true,
+          borderWidth: 0,
+          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+          shadow: false
+      },
+      credits: {
+          enabled: false
+      },
+      series: [{
+          name: 'Ikki',
+          data: [31]
+      }, {
+          name: 'Hyoga',
+          data: [23]
+      }],
+      exporting: {
+            enabled: false
+        }
+  });
+
+  $('#container_br_r4_g4m').highcharts({
       chart: {
           type: 'bar'
       },
@@ -307,10 +245,72 @@ $(function () {
       },
       series: [{
           name: 'Nachi',
-          data: [13]
+          data: [35]
       }, {
-          name: 'Ikki',
+          name: 'Geki',
           data: [31]
+      }],
+      exporting: {
+            enabled: false
+        }
+  });
+
+  $('#container_br_r4_g5m').highcharts({
+      chart: {
+          type: 'bar'
+      },
+      title: {
+          text: ''
+      },
+      subtitle: {
+          text: '<a href="#"></a>'
+      },
+      xAxis: {
+          categories: [''],
+          title: {
+              text: null
+          }
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Votos',
+              align: 'high'
+          },
+          labels: {
+              overflow: 'justify'
+          }
+      },
+      tooltip: {
+          valueSuffix: ' votos'
+      },
+      plotOptions: {
+          bar: {
+              dataLabels: {
+                  enabled: true
+              }
+          }
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'bottom',
+          x: -7,
+          y: 17,
+          floating: true,
+          borderWidth: 0,
+          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+          shadow: false
+      },
+      credits: {
+          enabled: false
+      },
+      series: [{
+          name: 'Seiya',
+          data: [30]
+      }, {
+          name: 'Shiryu',
+          data: [50]
       }],
       exporting: {
             enabled: false
