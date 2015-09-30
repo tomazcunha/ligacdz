@@ -122,6 +122,9 @@ p{
   margin-bottom: 10px;
 }
 
+.blocos-luta > .col-md-4{
+  margin: 20px 0px 0px 0px;
+}
 
 /*-----------------------------------------*/
 .banner-bronze{
@@ -131,17 +134,33 @@ p{
   background-size: cover;
 }
 
-.banner-prata{
+/*.banner-prata{
   height: 300px;
-  /*background-image: url(img/saint_seiya_online_01_medio.jpg);*/
   background-image: url(img/1prata2.jpg) ;
-  /*background-image: url(img/1prata3.png) ;*/
-  /*background-image: url(img/1prata4.jpg) ;*/
-  /*background-clip: padding-box;*/
   background-position: center;
   background-size: cover;
   background-position: 0px -265px;
+}*/
+  /*background-image: url(img/1prata3.png) ;*/
+  /*background-image: url(img/1prata4.jpg) ;*/
+  /*background-clip: padding-box;*/
+  /*background-image: url(img/saint_seiya_online_01_medio.jpg);*/
+
+.banner-prata{
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  /*background-position: 0px -50px;
+  background-image: url(img/1prata4.png);*/
+
+  /*background-position: 0px -50px;
+  background-image: url(img/1prata8.png);*/
+
+  background-position: 0px -140px;
+  background-image: url(img/1prata9.png);
 }
+
+
 
 .banner-ouro{
   height: 300px;
@@ -210,6 +229,8 @@ p{
 .lutas_head{
   /*nao preciso mais */
   /*padding-bottom: 0px;*/
+
+  padding: 0px 20px 20px 20px;
 }
 
 .panel_head_alt .panel-heading{
@@ -237,7 +258,7 @@ p{
 
 /*-------------- FOTOS ------------*/
 
-.totas-fotos{
+.todas-fotos{
   /*padding-top: 10px;
   padding-bottom: 0px;
   padding-left: 20px;
@@ -245,6 +266,8 @@ p{
 
   padding: 0px;
   padding-top: 10px;
+
+
 
 }
 .fotos{
@@ -254,11 +277,13 @@ p{
   margin: 0 auto;
   width: 10%;
 
-  /*display: inline;*/
+  display: block;
   float: left;
   /*position: relative;*/
   /*padding: 0px;*/
   /*margin-right: 14px;*/
+
+
 }
 .fotos p{
   margin: 10px 0px 10px 0px;

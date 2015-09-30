@@ -37,38 +37,10 @@
     var randomnb = function(){ return Math.round(Math.random()*300)};
   </script>
 
-  <script type="text/javascript">
-    var chart,
-            categories = [
-              'Albion de Cefeu',
-              'Algethi de Hércules',
-              'Algol de Perseu',
-              'Asterion de Cães de Caça',
-              'Babel de Centauro',
-              'Capela de Cocheiro/Auriga',
-              'Dante de Cérbero',
-              'Dio de Mosca',
-              'Jamian de Corvo',
-              'Marin de Águia',
-              'Misty de Lagarto',
-              'Mouses de Baleia',
-              'Orfeu de Lira',
-              'Shaina de Ofiúco',
-              'Sirius de Cão Maior',
-              'Tremy de Flecha/Sagita'
-              ];
 
-      var pontos  = [12, 6, 9, 9, 3, 10, 3, 0, 0, 3, 12, 3, 12, 7, 3, 3];
-      var votos_f = [69, 56, 75, 56, 45, 60, 32, 12, 24, 43, 86, 25, 57, 32, 70, 41];
-      var votos_c = [32, 78, 24, 17, 52, 27, 36, 73, 79, 52, 21, 73, 21, 39, 95, 64];
-      var saldo_c = [37, -22, 51, 39, -7, 33, -4, -61, -55, -9, 65, -48, 36, -7, -25, -23];
 
-      var r3_cav = ['Shun', 'Hyoga', ];
-      var r3_vot = [19, 26, ];
-
-      // var r3_
-
-  </script>
+  <!-- Dados dos gráficos -->
+   <script src="graficos/d_prata.js"></script>
 
   <!-- Highcharts -->
   <script src="http://code.highcharts.com/highcharts.js"></script>
@@ -76,21 +48,25 @@
   <script src="assets/js/highcharts/highcharts.js"></script>
   <script src="assets/js/highcharts/exporting.js"></script>
 
-  <!-- Meus Highcharts -->
-  <script src="graficos/g_bronze-gran-pontos.js"></script>
-  <script src="graficos/g_bronze-gran-saldo-c.js"></script>
+
+  <!-- Meus Highcharts  -->
+  <script src="graficos/g-gran-pontos.js"></script>
+  <script src="graficos/g-gran-saldo-c.js"></script>
+  <script src="graficos/g-gran-votos-f.js"></script>
+  <script src="graficos/g-gran-votos-c.js"></script>
+  <!-- <script src="graficos/g_bronze-gran-saldo-c.js"></script>
   <script src="graficos/g_bronze-gran-votos-f.js"></script>
   <script src="graficos/g_bronze-gran-votos-c.js"></script>
   <script src="graficos/g_bronze-r1.js"></script>
   <script src="graficos/g_bronze-r2.js"></script>
   <script src="graficos/g_bronze-r3.js"></script>
-  <script src="graficos/g_bronze-r4.js"></script>
-  <!--
-  <script src="graficos/g_bronze-r2.js"></script> -->
+  <script src="graficos/g_bronze-r4.js"></script> -->
+
+  <script src="graficos/g_prata-rodadas.js"></script>
 
 
   <!-- Jquery do Highcharts e DataTables -->
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
   <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
   <script src="assets/plugins/jquery.dataTables.min.js"></script>
 
@@ -193,8 +169,12 @@
 <section class="banner-capa">
   <div class="container" >
     <div class="row text-center">
-      <div class=" banner-bronze">
-        <!-- <img src="img/maxresdefault.jpg" alt="" /> -->
+      <div class=" banner-prata banner-abs">
+
+        <div class="titulo-batalha">
+          <h2>Liga de Prata</h2>
+        </div>
+
       </div>
     </div>
   </div>
@@ -206,7 +186,7 @@
 
       <div class="pane ">
         <div class="panel-heading panel-cdz1">
-          <h3 class="panel-title">Bronze</h3>
+          <h3 class="panel-title">Prata</h3>
         </div>
 
         <!-- Rodadas - Tab panes -->
@@ -219,7 +199,7 @@
               <!-- Imagens dos cavaleiros -->
               <div class="row">
                 <div class="col-md-12 col-menos-padding ">
-                  <div class="panel panel-default container totas-fotos ">
+                  <div class="panel panel-default container todas-fotos ">
 
 
                     <div class="fotos ">
@@ -233,67 +213,67 @@
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/algolpersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/algolpersonagem.png" alt="algol" class="img-rounded">
                       <p>Algol de Perseu</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/babelpersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/babelpersonagem.png" alt="babel" class="img-rounded">
                       <p>Babel de Centauro</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/capellapersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/capellapersonagem.png" alt="capella" class="img-rounded">
                       <p>Capela de Cocheiro/Auriga</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/dantepersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/dantepersonagem.png" alt="dante" class="img-rounded">
                       <p>Dante de Cérbero</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/diopersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/diopersonagem.png" alt="dio" class="img-rounded">
                       <p>Dio de Mosca</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/jamianpersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/jamianpersonagem.png" alt="jamian" class="img-rounded">
                       <p>Jamian de Corvo</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/marinpersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/marinpersonagem.png" alt="marin" class="img-rounded">
                       <p>Marin de Águia</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/mistypersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/mistypersonagem.png" alt="misty" class="img-rounded">
                       <p>Misty de Lagarto</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/mousespersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/mousespersonagem.png" alt="mouses" class="img-rounded">
                       <p>Mouses de Baleia</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/orfeupersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/orfeupersonagem.png" alt="orfeu" class="img-rounded">
                       <p>Orfeu de Lira</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/shinapersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/shinapersonagem.png" alt="shina" class="img-rounded">
                       <p>Shaina de Ofiúco</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/siriuspersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/siriuspersonagem.png" alt="sirius" class="img-rounded">
                       <p>Sirius de Cão Maior</p>
                     </div>
 
                     <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Prata/tremypersonagem.png" alt="..." class="img-rounded">
+                      <img src="img/Liga_do_Zodiaco/Prata/tremypersonagem.png" alt="tremy" class="img-rounded">
                       <p>Tremy de Flecha/Sagita</p>
                     </div>
 
@@ -319,7 +299,7 @@
                               <h3 class="panel-title">Pontos</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_g3" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
+                              <div id="container_pontos_g3" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -330,7 +310,7 @@
                               <h3 class="panel-title">Saldo de Cosmo</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_g2" style="min-width: 140px; max-width: 800px; height: 350px; margin: 0 auto"></div>
+                              <div id="container_saldo_g2" style="min-width: 140px; max-width: 800px; height: 350px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -347,7 +327,7 @@
                               <h3 class="panel-title">Votos a Favor</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_voto_f" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
+                              <div id="container_voto_f" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -358,7 +338,7 @@
                               <h3 class="panel-title">Votos Contra</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_voto_c" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
+                              <div id="container_voto_c" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -376,298 +356,70 @@
                 <div class="row">
                   <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
 
-                    <!-- 4ª Rodada -->
-                    <div class="panel panel-default ">
-                      <div class="panel-heading" role="tab" id="heading4">
-                        <h4 class="panel-title">
-                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapseOne">
-                            <h3 class="panel-title btn btn-default botao_gm">4ª Rodada <span class="caret"></span></h3>
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapse4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading4">
-                        <div class="panel-body lutas_head">
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Jabu vs Ban</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_bz_r4_g1m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ichi vs Shun</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r4_g2m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ikki vs Hyoga</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r4_g3m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Nachi vs Geki</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r4_g4m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Seiya vs Shiryu</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r4_g5m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-
-                <div class="row">
-                  <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
-
-                    <!-- 3ª Rodada -->
-                    <div class="panel panel-default ">
-                      <div class="panel-heading" role="tab" id="heading4">
-                        <h4 class="panel-title">
-                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapseOne">
-                            <h3 class="panel-title btn btn-default botao_gm">3ª Rodada <span class="caret"></span></h3>
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapse3" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading4">
-                        <div class="panel-body lutas_head">
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Shun vs Hyoga</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_bz_r3_g1m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Geki vs Seiya</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r3_g2m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Shiryu vs Jabu</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r3_g3m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ban vs Ichi</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r3_g4m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ikki vs Nachi</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r3_g5m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
-
-                    <!-- 2ª Rodada -->
-                    <div class="panel panel-default ">
-                      <div class="panel-heading" role="tab" id="heading2">
-                        <h4 class="panel-title">
-                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
-                            <h3 class="panel-title btn btn-default botao_gm">2ª Rodada <span class="caret"></span></h3>
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
-                        <div class="panel-body lutas_head">
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Jabu vs Geki</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_bz_r2_g1m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Hyoga vs Ban</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r2_g2m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Shun vs Ikki</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r2_g3m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ichi vs Shiryu</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r2_g4m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Seiya vs Nachi</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r2_g5m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
-
                     <!-- 1ª Rodada -->
                     <div class="panel panel-default ">
                       <div class="panel-heading" role="tab" id="heading1">
                         <h4 class="panel-title">
                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapseThree">
-                            <h3 class="panel-title btn btn-default botao_gm">1ª Rodada <span class="caret"></span></h3>
+                            <h3 class="panel-title btn btn-default botao_gm"> Lutas <span class="caret"></span></h3>
                           </a>
                         </h4>
                       </div>
-                      <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                      <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
                         <div class="panel-body lutas_head">
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Seiya vs Ikki</h3>
+
+                          <!-- Novo gráfico compactado -->
+                          <div class="row ">
+                            <div class="col-md-12 col-menos-padding blocos-luta">
+
+                              <div class="col-md-4">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">4ª Rodada </h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <div id="container_pr_compac_r4" style="min-width: 330px; max-width: 800px; height: 250px; margin: 0 auto"></div>
+                                  </div>
+                                </div>
                               </div>
-                              <div class="panel-body">
-                                <div id="container_bz_r1_g1m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
+
+                              <div class="col-md-4">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">3ª Rodada </h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <div id="container_pr_compac_r3" style="min-width: 330px; max-width: 800px; height: 250px; margin: 0 auto"></div>
+                                  </div>
+                                </div>
                               </div>
+
+                              <div class="col-md-4">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">2ª Rodada </h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <div id="container_pr_compac_r2" style="min-width: 330px; max-width: 800px; height: 250px; margin: 0 auto"></div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">1ª Rodada </h3>
+                                  </div>
+                                  <div class="panel-body">
+                                    <div id="container_pr_compac_r1" style="min-width: 330px; max-width: 800px; height: 250px; margin: 0 auto"></div>
+                                  </div>
+                                </div>
+                              </div>
+
                             </div>
                           </div>
 
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Nachi vs Jabu</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r1_g2m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
 
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Geki vs Ichi</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r1_g3m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Shiryu vs Hyoga</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r1_g4m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ban vs Shun</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r1_g5m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>

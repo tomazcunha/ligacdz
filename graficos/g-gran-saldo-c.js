@@ -14,7 +14,7 @@ $(function () {
 
   // highcharts bar with negative stack
   // http://stackoverflow.com/questions/21454550/highcharts-bar-with-negative-stack-how-to-position-data-labels
-  $('#container_bz_g2').highcharts({
+  $('#container_saldo_g2').highcharts({
           chart: {
               type: 'bar'
           },

@@ -2,15 +2,15 @@
 
 $(function () {
   Highcharts.setOptions({
-     colors: ['#FF4D4C', ]
-    // vermelho FF4D4C,
-    // verde 24BC25,
-    // azul 7473F2,
-    // roxo 7124BC
+     colors: ['#7473F2', ]
+     // vermelho FF4D4C,
+     // verde 24BC25,
+     // azul 7473F2,
+     // roxo 7124BC
     });
 
-  // ==================== Votos ====================================================
-  $('#container_bz_voto_c').highcharts({
+  // ==================== Pontos ====================================================
+  $('#container_pontos_g3').highcharts({
           chart: {
               type: 'bar'
           },
@@ -62,8 +62,8 @@ $(function () {
           },
           series: [
           {
-            name: 'Votos Contra',
-            data: votos_c
+              name: 'Pontos',
+              data: pontos
           },
         ],
 
@@ -71,7 +71,6 @@ $(function () {
             enabled: false
         }
       });
-
 
 
 

@@ -1,0 +1,111 @@
+/*
+  rodadas = M obj rodada
+  rodada  = M obj luta
+  luta    = M obj 
+*/
+{
+  "rodadas":[
+    {
+      "rodada":[
+        {
+          "luta":[
+            { "nome": "Seiya", "votos": 7 },
+            { "nome": "Ikki", "votos": 24 }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "Nachi", "votos": 5 },
+            { "nome": "Jabu", "votos": 28 }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "Geki", "votos": 19 },
+            { "nome": "Ichi", "votos": 13 }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "Shiryu", "votos": 16 },
+            { "nome": "Hyoga", "votos": 20 }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "Ban", "votos": 5 },
+            { "nome": "Shun", "votos": 31 }
+          ]
+        }
+      ]
+    },
+    {
+      "rodada":[
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+      ]
+    },
+    {
+      "rodada":[
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+        {
+          "luta":[
+            { "nome": "", "votos":  },
+            { "nome": "", "votos":  }
+          ]
+        },
+      ]
+    }
+  ]
+}

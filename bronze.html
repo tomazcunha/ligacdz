@@ -64,6 +64,9 @@
 
   </script>
 
+  <!-- Incluindo funçoes de json -->
+  <script type="text/javascript" src="json-js/funcoes.class.js"></script>
+
   <!-- Highcharts -->
   <script src="http://code.highcharts.com/highcharts.js"></script>
   <script src="http://code.highcharts.com/modules/exporting.js"></script>
@@ -71,10 +74,10 @@
   <script src="assets/js/highcharts/exporting.js"></script>
 
   <!-- Meus Highcharts -->
-  <script src="graficos/g_bronze-gran-pontos.js"></script>
-  <script src="graficos/g_bronze-gran-saldo-c.js"></script>
-  <script src="graficos/g_bronze-gran-votos-f.js"></script>
-  <script src="graficos/g_bronze-gran-votos-c.js"></script>
+  <script src="graficos/g-gran-pontos.js"></script>
+  <script src="graficos/g-gran-saldo-c.js"></script>
+  <script src="graficos/g-gran-votos-f.js"></script>
+  <script src="graficos/g-gran-votos-c.js"></script>
   <script src="graficos/g_bronze-r1.js"></script>
   <script src="graficos/g_bronze-r2.js"></script>
   <script src="graficos/g_bronze-r3.js"></script>
@@ -218,8 +221,12 @@
 <section class="banner-capa">
   <div class="container" >
     <div class="row text-center">
-      <div class=" banner-bronze">
-        <!-- <img src="img/maxresdefault.jpg" alt="" /> -->
+      <div class=" banner-bronze banner-abs">
+
+        <div class="titulo-batalha">
+          <h2>Liga de Bronze</h2>
+        </div>
+
       </div>
     </div>
   </div>
@@ -244,7 +251,7 @@
               <!-- Imagens dos cavaleiros -->
               <div class="row">
                 <div class="col-md-12 col-menos-padding ">
-                  <div class="panel panel-default container totas-fotos ">
+                  <div class="panel panel-default container todas-fotos ">
 
 
                     <div class="fotos ">
@@ -317,7 +324,7 @@
                               <h3 class="panel-title">Pontos</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_g3" style="min-width: 140px; max-width: auto; height: 250px; margin: 0 auto"></div>
+                              <div id="container_pontos_g3" style="min-width: 140px; max-width: auto; height: 250px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -328,7 +335,7 @@
                               <h3 class="panel-title">Saldo de Cosmo</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_g2" style="min-width: 140px; max-width: 800px; height: 250px; margin: 0 auto"></div>
+                              <div id="container_saldo_g2" style="min-width: 140px; max-width: 800px; height: 250px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -345,7 +352,7 @@
                               <h3 class="panel-title">Votos a Favor</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_voto_f" style="min-width: 140px; max-width: auto; height: 250px; margin: 0 auto"></div>
+                              <div id="container_voto_f" style="min-width: 140px; max-width: auto; height: 250px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -356,7 +363,7 @@
                               <h3 class="panel-title">Votos Contra</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_bz_voto_c" style="min-width: 140px; max-width: auto; height: 250px; margin: 0 auto"></div>
+                              <div id="container_voto_c" style="min-width: 140px; max-width: auto; height: 250px; margin: 0 auto"></div>
                             </div>
                           </div>
                         </div>
@@ -675,6 +682,16 @@
 
               </div>
 
+              <!-- JSON -->
+              <div class="row">
+                <div class="col-md-12 col-menos-padding ">
+                  <div role="panel ">
+                    <div id="testejson">
+                      SDASDASD
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <!-- Linha com as tabelas -->
               <div class="row">
