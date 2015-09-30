@@ -7,8 +7,8 @@ $(function () {
   // =================== Graficos menores compactado em um ================================================
 
 
-    // ======== 3 rodada
-    $('#container_pr_compac_r4').highcharts({
+    // ======== 4 rodada
+    $('#container_compac_r4').highcharts({
         chart: {
             type: 'bar'
         },
@@ -75,7 +75,7 @@ $(function () {
     });
 
     // ======== 3 rodada
-    $('#container_pr_compac_r3').highcharts({
+    $('#container_compac_r3').highcharts({
         chart: {
             type: 'bar'
         },
@@ -143,7 +143,7 @@ $(function () {
 
 
     // ======== 2 rodada
-    $('#container_pr_compac_r2').highcharts({
+    $('#container_compac_r2').highcharts({
         chart: {
             type: 'bar'
         },
@@ -211,7 +211,7 @@ $(function () {
 
 
     // ======== 1 rodada
-    $('#container_pr_compac_r1').highcharts({
+    $('#container_compac_r1').highcharts({
         chart: {
             type: 'bar'
         },

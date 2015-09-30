@@ -34,35 +34,9 @@
 
 
   <script type="text/javascript">
-    var randomnb = function(){ return Math.round(Math.random()*300)};
+  var randomnb = function(){ return Math.round(Math.random()*300)};
   </script>
 
-  <script type="text/javascript">
-    var chart,
-            categories = [
-              'Ban de Leão Menor',
-              'Geki de Urso',
-              'Hyoga de Cisne',
-              'Ichi de Hidra',
-              'Ikki de Fênix',
-              'Jabu de Unicórnio',
-              'Nachi de Lobo',
-              'Seiya de Pégaso',
-              'Shiryu de Dragão',
-              'Shun de Andrômeda'
-              ];
-
-      var pontos  = [0, 3, 9, 3, 10, 9, 3, 6, 9, 7];
-      var votos_f = [38, 76, 94, 56, 108, 109, 61, 85, 121, 107];
-      var votos_c = [114, 97, 71, 101, 65, 49, 116, 100, 79, 63];
-      var saldo_c = [-76, -21, 23, -45, 43, 60, -55, -15, 42, 44];
-
-      var r3_cav = ['Shun', 'Hyoga', ];
-      var r3_vot = [19, 26, ];
-
-      // var r3_
-
-  </script>
 
   <!-- Incluindo funçoes de json -->
   <script type="text/javascript" src="json-js/funcoes.class.js"></script>
@@ -73,15 +47,15 @@
   <script src="assets/js/highcharts/highcharts.js"></script>
   <script src="assets/js/highcharts/exporting.js"></script>
 
+  <!-- Dados dos gráficos -->
+  <script src="graficos/d_bronze.js"></script>
+
   <!-- Meus Highcharts -->
   <script src="graficos/g-gran-pontos.js"></script>
   <script src="graficos/g-gran-saldo-c.js"></script>
   <script src="graficos/g-gran-votos-f.js"></script>
   <script src="graficos/g-gran-votos-c.js"></script>
-  <script src="graficos/g_bronze-r1.js"></script>
-  <script src="graficos/g_bronze-r2.js"></script>
-  <script src="graficos/g_bronze-r3.js"></script>
-  <script src="graficos/g_bronze-r4.js"></script>
+  <script src="graficos/g-rodadas.js"></script>
   <!--
   <script src="graficos/g_bronze-r2.js"></script> -->
 
@@ -134,15 +108,15 @@
         "order": [[ 4, "desc" ]],
         // "order": [[ 0, 'asc' ], [ 1, 'asc' ]],
         "columnDefs": [
-            {
-                "targets": [ 1 ],
-                "visible": false,
-                "searchable": false
-            },
-            // {
-            //     "targets": [ 3 ],
-            //     "visible": false
-            // }
+          {
+            "targets": [ 1 ],
+            "visible": false,
+            "searchable": false
+          },
+          // {
+          //     "targets": [ 3 ],
+          //     "visible": false
+          // }
         ]
 
       } );
@@ -180,143 +154,111 @@
 
     </div>
   </div>
-  <!--/.NAVBAR END-->
+
 
   <section id="home" class="text-center">
-
-    <!-- <div id="carousel-example" class="carousel slide" data-ride="carousel">
-
-      <div class="carousel-inner">
-        <div class="item active">
-
-          <img src="assets/img/1.jpg" alt="" />
-          <div class="carousel-caption" >
-            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
-          </div>
-        </div>
-        <div class="item">
-          <img src="assets/img/2.jpg" alt="" />
-          <div class="carousel-caption ">
-            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
-          </div>
-        </div>
-        <div class="item">
-          <img src="assets/img/3.jpg" alt="" />
-          <div class="carousel-caption ">
-            <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
-          </div>
-        </div>
-      </div>
-
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example" data-slide-to="1"></li>
-        <li data-target="#carousel-example" data-slide-to="2"></li>
-      </ol>
-    </div> -->
-
   </section>
-  <!--/.SLIDESHOW END-->
 
-<section class="banner-capa">
-  <div class="container" >
-    <div class="row text-center">
-      <div class=" banner-bronze banner-abs">
 
-        <div class="titulo-batalha">
-          <h2>Liga de Bronze</h2>
+  <section class="banner-capa">
+    <div class="container" >
+      <div class="row text-center">
+        <div class=" banner-bronze banner-abs">
+
+          <div class="titulo-batalha">
+            <h2>Liga de Bronze</h2>
+          </div>
+
         </div>
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="conteudo">
-  <div class="container">
-    <div class="row text-center" >
+  <section class="conteudo">
+    <div class="container">
+      <div class="row text-center" >
 
-      <div class="pane ">
-        <div class="panel-heading panel-cdz1">
-          <h3 class="panel-title">Bronze</h3>
-        </div>
+        <div class="pane ">
+          <div class="panel-heading panel-cdz1">
+            <h3 class="panel-title">Bronze</h3>
+          </div>
 
-        <!-- Rodadas - Tab panes -->
-        <div class="tab-content ">
+          <!-- Rodadas - Tab panes -->
+          <div class="tab-content ">
 
-          <!-- Primera -->
-          <div role="tabpanel" class="tab-pane active" id="rodada1">
-            <div class="panel-body">
+            <!-- Primera -->
+            <div role="tabpanel" class="tab-pane active" id="rodada1">
+              <div class="panel-body">
 
-              <!-- Imagens dos cavaleiros -->
-              <div class="row">
-                <div class="col-md-12 col-menos-padding ">
-                  <div class="panel panel-default container todas-fotos ">
+                <!-- Imagens dos cavaleiros -->
+                <div class="row">
+                  <div class="col-md-12 col-menos-padding ">
+                    <div class="panel panel-default container todas-fotos ">
 
 
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/BAN.jpg" alt="Ban" class="img-rounded">
-                      <p>Ban de Leão Menor</p>
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/BAN.jpg" alt="Ban" class="img-rounded">
+                        <p>Ban de Leão Menor</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/geki.jpg" alt="Geki" class="img-rounded">
+                        <p>Geki de Urso</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/ICHI.jpg" alt="..." class="img-rounded">
+                        <p>Ichi de Hidra</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/IKKI.jpg" alt="..." class="img-rounded">
+                        <p>Ikki de Fênix</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/JABU.jpg" alt="..." class="img-rounded">
+                        <p>Jabu de Unicórnio</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/nachi.jpg" alt="..." class="img-rounded">
+                        <p>Nachi de Lobo</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/SEYA.jpg" alt="..." class="img-rounded">
+                        <p>Seiya de Pégaso</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/shiryu.jpg" alt="..." class="img-rounded">
+                        <p>Shiryu de Dragão</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/shun.jpg" alt="..." class="img-rounded">
+                        <p>Shun de Andrômeda</p>
+                      </div>
+
+                      <div class="fotos ">
+                        <img src="img/Liga_do_Zodiaco/Bronze/yoga.jpg" alt="..." class="img-rounded">
+                        <p>Hyoga de Cisne</p>
+                      </div>
+
                     </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/geki.jpg" alt="Geki" class="img-rounded">
-                      <p>Geki de Urso</p>
-                    </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/ICHI.jpg" alt="..." class="img-rounded">
-                      <p>Ichi de Hidra</p>
-                    </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/IKKI.jpg" alt="..." class="img-rounded">
-                      <p>Ikki de Fênix</p>
-                    </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/JABU.jpg" alt="..." class="img-rounded">
-                      <p>Jabu de Unicórnio</p>
-                    </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/nachi.jpg" alt="..." class="img-rounded">
-                      <p>Nachi de Lobo</p>
-                    </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/SEYA.jpg" alt="..." class="img-rounded">
-                      <p>Seiya de Pégaso</p>
-                    </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/shiryu.jpg" alt="..." class="img-rounded">
-                      <p>Shiryu de Dragão</p>
-                    </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/shun.jpg" alt="..." class="img-rounded">
-                      <p>Shun de Andrômeda</p>
-                    </div>
-
-                    <div class="fotos ">
-                      <img src="img/Liga_do_Zodiaco/Bronze/yoga.jpg" alt="..." class="img-rounded">
-                      <p>Hyoga de Cisne</p>
-                    </div>
-
                   </div>
                 </div>
-              </div>
 
-              <!-- Linha com os graficos grandes -->
-              <div class="row">
-                <div class="col-md-12 col-menos-padding">
-
+                <!-- Linha com os graficos grandes -->
+                <div class="row">
+                  <div class="col-md-12 col-menos-padding">
 
 
 
-                  <div class="row ">
-                    <div class="col-md-12 col-menos-padding">
+
+                    <div class="row ">
+                      <div class="col-md-12 col-menos-padding">
 
                         <div class="col-md-6">
                           <div class="panel panel-default">
@@ -340,11 +282,11 @@
                           </div>
                         </div>
 
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="row ">
-                    <div class="col-md-12 col-menos-padding">
+                    <div class="row ">
+                      <div class="col-md-12 col-menos-padding">
 
                         <div class="col-md-6">
                           <div class="panel panel-default">
@@ -368,876 +310,651 @@
                           </div>
                         </div>
 
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <!-- Graficos menores -->
+                <div class="panel-group gm_grupo" id="accordion" role="tablist" aria-multiselectable="true">
+
+                  <!-- Linha para o Painel -->
+                  <div class="row">
+                    <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
+
+                      <!-- Painel das Rodadas -->
+                      <div class="panel panel-default ">
+
+                        <div class="panel-heading" role="tab" id="heading1">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapseThree">
+                              <h3 class="panel-title btn btn-default botao_gm"> Lutas <span class="caret"></span></h3>
+                            </a>
+                          </h4>
+                        </div>
+
+                        <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                          <div class="panel-body lutas_head">
+
+                            <!-- Novo gráfico compactado -->
+                            <div class="row ">
+                              <div class="col-md-12 col-menos-padding blocos-luta">
+
+                                <div class="col-md-4">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">4ª Rodada </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                      <div id="container_compac_r4" style="min-width: 330px; max-width: 800px; height: 185px; margin: 0 auto"></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">3ª Rodada </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                      <div id="container_compac_r3" style="min-width: 330px; max-width: 800px; height: 185px; margin: 0 auto"></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">2ª Rodada </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                      <div id="container_compac_r2" style="min-width: 330px; max-width: 800px; height: 185px; margin: 0 auto"></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">1ª Rodada </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                      <div id="container_compac_r1" style="min-width: 330px; max-width: 800px; height: 185px; margin: 0 auto"></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
+
+                </div>
+
+                <!-- JSON -->
+                <!-- <div class="row">
+                  <div class="col-md-12 col-menos-padding ">
+                    <div role="panel ">
+                      <div id="testejson">
+                        SDASDASD
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- Linha com as tabelas -->
+                <div class="row">
+                  <div class="col-md-12 col-menos-padding panel_head_alt">
+                    <div class="panel panel-default">
+
+                      <div class="panel-heading botao_tabela">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills " role="tablist">
+                          <li role="presentation" class="active "><a href="#tabela_1rodada" aria-controls="tabela_1rodada" role="tab" data-toggle="tab">1ª Rodada</a></li>
+                          <li role="presentation" class=""><a href="#tabela_2rodada" aria-controls="tabela_2rodada" role="tab" data-toggle="tab">2ª Rodada</a></li>
+                          <li role="presentation" class=""><a href="#tabela_3rodada" aria-controls="tabela_3rodada" role="tab" data-toggle="tab">3ª Rodada</a></li>
+                          <li role="presentation" class=""><a href="#tabela_4rodada" aria-controls="tabela_4rodada" role="tab" data-toggle="tab">4ª Rodada</a></li>
+                        </ul>
+
+                      </div>
+
+                      <div class="panel-body">
+
+                        <!-- Tab panes -->
+                        <div class="tab-content tabela_dados">
+                          <div role="tabpanel" class="tab-pane active" id="tabela_1rodada">
+                            <table id="tab_1rod" class="table table-condensed table-striped table-hover">
+                              <thead>
+                                <tr>
+                                  <th>Posição</th>
+                                  <th>Foto</th>
+                                  <th>Cavaleiro</th>
+                                  <th>Lutas</th>
+                                  <th>Pontos</th>
+                                  <th>Vt. Favor</th>
+                                  <th>Vt. Contra</th>
+                                  <th>Saldo de Cosmo</th>
+                                </tr>
+                              </thead>
+                              <!-- <tfoot>
+                              <tr>
+                              <th>Posição</th>
+                              <th>Foto</th>
+                              <th>Cavaleiro</th>
+                              <th>Lutas</th>
+                              <th>Pontos</th>
+                              <th>Vt. Favor</th>
+                              <th>Vt. Contra</th>
+                              <th>Saldo de Cosmo</th>
+                            </tr>
+                          </tfoot> -->
+                          <tbody>
+                            <tr>
+                              <td>1º</td>
+                              <td></td>
+                              <td>Shun de Andrômeda</td>
+                              <td>1</td>
+                              <td>3</td>
+                              <td>31</td>
+                              <td>5</td>
+                              <td>26</td>
+                            </tr>
+                            <tr>
+                              <td>2º</td>
+                              <td></td>
+                              <td>Jabu de Unicórnio</td>
+                              <td>1</td>
+                              <td>3</td>
+                              <td>28</td>
+                              <td>5</td>
+                              <td>23</td>
+                            </tr>
+                            <tr>
+                              <td>3º</td>
+                              <td></td>
+                              <td>Ikki de Fênix</td>
+                              <td>1</td>
+                              <td>3</td>
+                              <td>24</td>
+                              <td>7</td>
+                              <td>17</td>
+                            </tr>
+                            <tr>
+                              <td>4º</td>
+                              <td></td>
+                              <td>Geki de Urso</td>
+                              <td>1</td>
+                              <td>3</td>
+                              <td>19</td>
+                              <td>13</td>
+                              <td>6</td>
+                            </tr>
+                            <tr>
+                              <td>5º</td>
+                              <td></td>
+                              <td>Hyoga de Cisne</td>
+                              <td>1</td>
+                              <td>3</td>
+                              <td>20</td>
+                              <td>16</td>
+                              <td>4</td>
+                            </tr>
+                            <tr>
+                              <td>6º</td>
+                              <td></td>
+                              <td>Shiryu de Dragão</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>16</td>
+                              <td>20</td>
+                              <td>-4</td>
+                            </tr>
+                            <tr>
+                              <td>7º</td>
+                              <td></td>
+                              <td>Ichi de Hidra</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>13</td>
+                              <td>19</td>
+                              <td>-6</td>
+                            </tr>
+                            <tr>
+                              <td>8º</td>
+                              <td></td>
+                              <td>Seiya de Pégaso</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>7</td>
+                              <td>24</td>
+                              <td>-17</td>
+                            </tr>
+                            <tr>
+                              <td>9º</td>
+                              <td></td>
+                              <td>Nachi de Lobo</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>5</td>
+                              <td>28</td>
+                              <td>-23</td>
+                            </tr>
+                            <tr>
+                              <td>10º</td>
+                              <td></td>
+                              <td>Ban de Leão Menor</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>5</td>
+                              <td>31</td>
+                              <td>-26</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="tabela_2rodada">
+                        <table id="tab_2rod" class="table table-condensed table-striped">
+                          <thead>
+                            <tr>
+                              <th>Posição</th>
+                              <th>Foto</th>
+                              <th>Cavaleiro</th>
+                              <th>Lutas</th>
+                              <th>Pontos</th>
+                              <th>Vt. Favor</th>
+                              <th>Vt. Contra</th>
+                              <th>Saldo de Cosmo</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1º</td>
+                              <td></td>
+                              <td>Jabu de Unicórnio</td>
+                              <td>2</td>
+                              <td>6</td>
+                              <td>55</td>
+                              <td>13</td>
+                              <td>42</td>
+                            </tr>
+                            <tr>
+                              <td>2º</td>
+                              <td></td>
+                              <td>Hyoga de Cisne</td>
+                              <td>2</td>
+                              <td>6</td>
+                              <td>45</td>
+                              <td>21</td>
+                              <td>24</td>
+                            </tr>
+                            <tr>
+                              <td>3º</td>
+                              <td></td>
+                              <td>Shun de Andrômeda</td>
+                              <td>2</td>
+                              <td>4</td>
+                              <td>53</td>
+                              <td>27</td>
+                              <td>26</td>
+                            </tr>
+                            <tr>
+                              <td>4º</td>
+                              <td></td>
+                              <td>Ikki de Fênix</td>
+                              <td>2</td>
+                              <td>4</td>
+                              <td>46</td>
+                              <td>29</td>
+                              <td>17</td>
+                            </tr>
+                            <tr>
+                              <td>5º</td>
+                              <td></td>
+                              <td>Shiryu de Dragão</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>45</td>
+                              <td>28</td>
+                              <td>17</td>
+                            </tr>
+                            <tr>
+                              <td>6º</td>
+                              <td></td>
+                              <td>Seiya de Pégaso</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>33</td>
+                              <td>32</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>7º</td>
+                              <td></td>
+                              <td>Geki de Urso</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>27</td>
+                              <td>40</td>
+                              <td>-13</td>
+                            </tr>
+                            <tr>
+                              <td>8º</td>
+                              <td></td>
+                              <td>Ichi de Hidra</td>
+                              <td>2</td>
+                              <td>0</td>
+                              <td>21</td>
+                              <td>48</td>
+                              <td>-27</td>
+                            </tr>
+                            <tr>
+                              <td>9º</td>
+                              <td></td>
+                              <td>Nachi de Lobo</td>
+                              <td>2</td>
+                              <td>0</td>
+                              <td>13</td>
+                              <td>54</td>
+                              <td>-41</td>
+                            </tr>
+                            <tr>
+                              <td>10º</td>
+                              <td></td>
+                              <td>Ban de Leão Menor</td>
+                              <td>2</td>
+                              <td>0</td>
+                              <td>10</td>
+                              <td>56</td>
+                              <td>-46</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="tabela_3rodada">
+                        <table id="tab_3rod" class="table table-condensed table-striped">
+                          <thead>
+                            <tr>
+                              <th>Posição</th>
+                              <th>Foto</th>
+                              <th>Cavaleiro</th>
+                              <th>Lutas</th>
+                              <th>Pontos</th>
+                              <th>Vt. Favor</th>
+                              <th>Vt. Contra</th>
+                              <th>Saldo de Cosmo</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1º</td>
+                              <td></td>
+                              <td>Hyoga de Cisne</td>
+                              <td>3</td>
+                              <td>9</td>
+                              <td>71</td>
+                              <td>40</td>
+                              <td>31</td>
+                            </tr>
+                            <tr>
+                              <td>2º</td>
+                              <td></td>
+                              <td>Ikki de Fênix</td>
+                              <td>3</td>
+                              <td>7</td>
+                              <td>77</td>
+                              <td>42</td>
+                              <td>35</td>
+                            </tr>
+                            <tr>
+                              <td>3º</td>
+                              <td></td>
+                              <td>Jabu de Unicórnio</td>
+                              <td>3</td>
+                              <td>6</td>
+                              <td>76</td>
+                              <td>39</td>
+                              <td>37</td>
+                            </tr>
+                            <tr>
+                              <td>4º</td>
+                              <td></td>
+                              <td>Shiryu de Dragão</td>
+                              <td>3</td>
+                              <td>6</td>
+                              <td>71</td>
+                              <td>49</td>
+                              <td>22</td>
+                            </tr>
+                            <tr>
+                              <td>5º</td>
+                              <td></td>
+                              <td>Seiya de Pégaso</td>
+                              <td>3</td>
+                              <td>6</td>
+                              <td>55</td>
+                              <td>50</td>
+                              <td>5</td>
+                            </tr>
+                            <tr>
+                              <td>6º</td>
+                              <td></td>
+                              <td>Shun de Andrômeda</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>72</td>
+                              <td>53</td>
+                              <td>19</td>
+                            </tr>
+                            <tr>
+                              <td>7º</td>
+                              <td></td>
+                              <td>Geki de Urso</td>
+                              <td>3</td>
+                              <td>3</td>
+                              <td>45</td>
+                              <td>62</td>
+                              <td>-17</td>
+                            </tr>
+                            <tr>
+                              <td>8º</td>
+                              <td></td>
+                              <td>Ichi de Hidra</td>
+                              <td>3</td>
+                              <td>3</td>
+                              <td>46</td>
+                              <td>66</td>
+                              <td>-20</td>
+                            </tr>
+                            <tr>
+                              <td>9º</td>
+                              <td></td>
+                              <td>Ban de Leão Menor</td>
+                              <td>3</td>
+                              <td>0</td>
+                              <td>28</td>
+                              <td>81</td>
+                              <td>-53</td>
+                            </tr>
+                            <tr>
+                              <td>10º</td>
+                              <td></td>
+                              <td>Nachi de Lobo</td>
+                              <td>3</td>
+                              <td>0</td>
+                              <td>26</td>
+                              <td>85</td>
+                              <td>-59</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="tabela_4rodada">
+                        <table id="tab_4rod" class="table table-condensed table-striped">
+                          <thead>
+                            <tr>
+                              <th>Posição</th>
+                              <th>Foto</th>
+                              <th>Cavaleiro</th>
+                              <th>Lutas</th>
+                              <th>Pontos</th>
+                              <th>Vt. Favor</th>
+                              <th>Vt. Contra</th>
+                              <th>Saldo de Cosmo</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1º</td>
+                              <td></td>
+                              <td>Ikki de Fênix</td>
+                              <td>4</td>
+                              <td>10</td>
+                              <td>108</td>
+                              <td>65</td>
+                              <td>43</td>
+                            </tr>
+                            <tr>
+                              <td>2º</td>
+                              <td></td>
+                              <td>Jabu de Unicórnio</td>
+                              <td>4</td>
+                              <td>9</td>
+                              <td>109</td>
+                              <td>49</td>
+                              <td>60</td>
+                            </tr>
+                            <tr>
+                              <td>3º</td>
+                              <td></td>
+                              <td>Shiryu de Dragão</td>
+                              <td>4</td>
+                              <td>9</td>
+                              <td>121</td>
+                              <td>79</td>
+                              <td>42</td>
+                            </tr>
+                            <tr>
+                              <td>4º</td>
+                              <td></td>
+                              <td>Hyoga de Cisne</td>
+                              <td>4</td>
+                              <td>9</td>
+                              <td>94</td>
+                              <td>71</td>
+                              <td>23</td>
+                            </tr>
+                            <tr>
+                              <td>5º</td>
+                              <td></td>
+                              <td>Shun de Andrômeda</td>
+                              <td>4</td>
+                              <td>7</td>
+                              <td>107</td>
+                              <td>63</td>
+                              <td>44</td>
+                            </tr>
+                            <tr>
+                              <td>6º</td>
+                              <td></td>
+                              <td>Seiya de Pégaso</td>
+                              <td>4</td>
+                              <td>6</td>
+                              <td>85</td>
+                              <td>100</td>
+                              <td>-15</td>
+                            </tr>
+                            <tr>
+                              <td>7º</td>
+                              <td></td>
+                              <td>Geki de Urso</td>
+                              <td>4</td>
+                              <td>3</td>
+                              <td>76</td>
+                              <td>97</td>
+                              <td>-21</td>
+                            </tr>
+                            <tr>
+                              <td>8º</td>
+                              <td></td>
+                              <td>Ichi de Hidra</td>
+                              <td>4</td>
+                              <td>3</td>
+                              <td>56</td>
+                              <td>101</td>
+                              <td>-45</td>
+                            </tr>
+                            <tr>
+                              <td>9º</td>
+                              <td></td>
+                              <td>Nachi de Lobo</td>
+                              <td>4</td>
+                              <td>3</td>
+                              <td>61</td>
+                              <td>116</td>
+                              <td>-55</td>
+                            </tr>
+                            <tr>
+                              <td>10º</td>
+                              <td></td>
+                              <td>Ban de Leão Menor</td>
+                              <td>4</td>
+                              <td>0</td>
+                              <td>38</td>
+                              <td>114</td>
+                              <td>-76</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                  </div>
+
+
 
                 </div>
               </div>
-
-
-              <!-- Graficos menores -->
-              <div class="panel-group gm_grupo" id="accordion" role="tablist" aria-multiselectable="true">
-
-                <div class="row">
-                  <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
-
-                    <!-- 4ª Rodada -->
-                    <div class="panel panel-default ">
-                      <div class="panel-heading" role="tab" id="heading4">
-                        <h4 class="panel-title">
-                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapseOne">
-                            <h3 class="panel-title btn btn-default botao_gm">4ª Rodada <span class="caret"></span></h3>
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapse4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading4">
-                        <div class="panel-body lutas_head">
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Jabu vs Ban</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_bz_r4_g1m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ichi vs Shun</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r4_g2m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ikki vs Hyoga</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r4_g3m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Nachi vs Geki</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r4_g4m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Seiya vs Shiryu</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r4_g5m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-
-                <div class="row">
-                  <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
-
-                    <!-- 3ª Rodada -->
-                    <div class="panel panel-default ">
-                      <div class="panel-heading" role="tab" id="heading4">
-                        <h4 class="panel-title">
-                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapseOne">
-                            <h3 class="panel-title btn btn-default botao_gm">3ª Rodada <span class="caret"></span></h3>
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapse3" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading4">
-                        <div class="panel-body lutas_head">
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Shun vs Hyoga</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_bz_r3_g1m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Geki vs Seiya</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r3_g2m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Shiryu vs Jabu</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r3_g3m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ban vs Ichi</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r3_g4m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ikki vs Nachi</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r3_g5m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
-
-                    <!-- 2ª Rodada -->
-                    <div class="panel panel-default ">
-                      <div class="panel-heading" role="tab" id="heading2">
-                        <h4 class="panel-title">
-                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
-                            <h3 class="panel-title btn btn-default botao_gm">2ª Rodada <span class="caret"></span></h3>
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
-                        <div class="panel-body lutas_head">
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Jabu vs Geki</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_bz_r2_g1m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Hyoga vs Ban</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r2_g2m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Shun vs Ikki</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r2_g3m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ichi vs Shiryu</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r2_g4m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Seiya vs Nachi</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r2_g5m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
-
-                    <!-- 1ª Rodada -->
-                    <div class="panel panel-default ">
-                      <div class="panel-heading" role="tab" id="heading1">
-                        <h4 class="panel-title">
-                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapseThree">
-                            <h3 class="panel-title btn btn-default botao_gm">1ª Rodada <span class="caret"></span></h3>
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
-                        <div class="panel-body lutas_head">
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Seiya vs Ikki</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_bz_r1_g1m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Nachi vs Jabu</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r1_g2m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Geki vs Ichi</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r1_g3m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Shiryu vs Hyoga</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r1_g4m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-2">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">Ban vs Shun</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div id="container_br_r1_g5m" style="min-width: 140px; max-width: 800px; height: 110px; margin: 0 auto"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- JSON -->
-              <div class="row">
-                <div class="col-md-12 col-menos-padding ">
-                  <div role="panel ">
-                    <div id="testejson">
-                      SDASDASD
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Linha com as tabelas -->
-              <div class="row">
-                <div class="col-md-12 col-menos-padding panel_head_alt">
-                  <div class="panel panel-default">
-
-                    <div class="panel-heading botao_tabela">
-                      <!-- Nav tabs -->
-                      <ul class="nav nav-pills " role="tablist">
-                        <li role="presentation" class="active "><a href="#tabela_1rodada" aria-controls="tabela_1rodada" role="tab" data-toggle="tab">1ª Rodada</a></li>
-                        <li role="presentation" class=""><a href="#tabela_2rodada" aria-controls="tabela_2rodada" role="tab" data-toggle="tab">2ª Rodada</a></li>
-                        <li role="presentation" class=""><a href="#tabela_3rodada" aria-controls="tabela_3rodada" role="tab" data-toggle="tab">3ª Rodada</a></li>
-                        <li role="presentation" class=""><a href="#tabela_4rodada" aria-controls="tabela_4rodada" role="tab" data-toggle="tab">4ª Rodada</a></li>
-                      </ul>
-
-                    </div>
-
-                    <div class="panel-body">
-
-                      <!-- Tab panes -->
-                      <div class="tab-content tabela_dados">
-                        <div role="tabpanel" class="tab-pane active" id="tabela_1rodada">
-                          <table id="tab_1rod" class="table table-condensed table-striped table-hover">
-                            <thead>
-                              <tr>
-                                <th>Posição</th>
-                                <th>Foto</th>
-                                <th>Cavaleiro</th>
-                                <th>Lutas</th>
-                                <th>Pontos</th>
-                                <th>Vt. Favor</th>
-                                <th>Vt. Contra</th>
-                                <th>Saldo de Cosmo</th>
-                              </tr>
-                            </thead>
-                            <!-- <tfoot>
-                              <tr>
-                                <th>Posição</th>
-                                <th>Foto</th>
-                                <th>Cavaleiro</th>
-                                <th>Lutas</th>
-                                <th>Pontos</th>
-                                <th>Vt. Favor</th>
-                                <th>Vt. Contra</th>
-                                <th>Saldo de Cosmo</th>
-                              </tr>
-                            </tfoot> -->
-                            <tbody>
-                              <tr>
-                                <td>1º</td>
-                                <td></td>
-                                <td>Shun de Andrômeda</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>31</td>
-                                <td>5</td>
-                                <td>26</td>
-                              </tr>
-                              <tr>
-                                <td>2º</td>
-                                <td></td>
-                                <td>Jabu de Unicórnio</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>28</td>
-                                <td>5</td>
-                                <td>23</td>
-                              </tr>
-                              <tr>
-                                <td>3º</td>
-                                <td></td>
-                                <td>Ikki de Fênix</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>24</td>
-                                <td>7</td>
-                                <td>17</td>
-                              </tr>
-                              <tr>
-                                <td>4º</td>
-                                <td></td>
-                                <td>Geki de Urso</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>19</td>
-                                <td>13</td>
-                                <td>6</td>
-                              </tr>
-                              <tr>
-                                <td>5º</td>
-                                <td></td>
-                                <td>Hyoga de Cisne</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>20</td>
-                                <td>16</td>
-                                <td>4</td>
-                              </tr>
-                              <tr>
-                                <td>6º</td>
-                                <td></td>
-                                <td>Shiryu de Dragão</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>16</td>
-                                <td>20</td>
-                                <td>-4</td>
-                              </tr>
-                              <tr>
-                                <td>7º</td>
-                                <td></td>
-                                <td>Ichi de Hidra</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>13</td>
-                                <td>19</td>
-                                <td>-6</td>
-                              </tr>
-                              <tr>
-                                <td>8º</td>
-                                <td></td>
-                                <td>Seiya de Pégaso</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>7</td>
-                                <td>24</td>
-                                <td>-17</td>
-                              </tr>
-                              <tr>
-                                <td>9º</td>
-                                <td></td>
-                                <td>Nachi de Lobo</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>5</td>
-                                <td>28</td>
-                                <td>-23</td>
-                              </tr>
-                              <tr>
-                                <td>10º</td>
-                                <td></td>
-                                <td>Ban de Leão Menor</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>5</td>
-                                <td>31</td>
-                                <td>-26</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="tabela_2rodada">
-                          <table id="tab_2rod" class="table table-condensed table-striped">
-                            <thead>
-                              <tr>
-                                <th>Posição</th>
-                                <th>Foto</th>
-                                <th>Cavaleiro</th>
-                                <th>Lutas</th>
-                                <th>Pontos</th>
-                                <th>Vt. Favor</th>
-                                <th>Vt. Contra</th>
-                                <th>Saldo de Cosmo</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1º</td>
-                                <td></td>
-                                <td>Jabu de Unicórnio</td>
-                                <td>2</td>
-                                <td>6</td>
-                                <td>55</td>
-                                <td>13</td>
-                                <td>42</td>
-                              </tr>
-                              <tr>
-                                <td>2º</td>
-                                <td></td>
-                                <td>Hyoga de Cisne</td>
-                                <td>2</td>
-                                <td>6</td>
-                                <td>45</td>
-                                <td>21</td>
-                                <td>24</td>
-                              </tr>
-                              <tr>
-                                <td>3º</td>
-                                <td></td>
-                                <td>Shun de Andrômeda</td>
-                                <td>2</td>
-                                <td>4</td>
-                                <td>53</td>
-                                <td>27</td>
-                                <td>26</td>
-                              </tr>
-                              <tr>
-                                <td>4º</td>
-                                <td></td>
-                                <td>Ikki de Fênix</td>
-                                <td>2</td>
-                                <td>4</td>
-                                <td>46</td>
-                                <td>29</td>
-                                <td>17</td>
-                              </tr>
-                              <tr>
-                                <td>5º</td>
-                                <td></td>
-                                <td>Shiryu de Dragão</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>45</td>
-                                <td>28</td>
-                                <td>17</td>
-                              </tr>
-                              <tr>
-                                <td>6º</td>
-                                <td></td>
-                                <td>Seiya de Pégaso</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>33</td>
-                                <td>32</td>
-                                <td>1</td>
-                              </tr>
-                              <tr>
-                                <td>7º</td>
-                                <td></td>
-                                <td>Geki de Urso</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>27</td>
-                                <td>40</td>
-                                <td>-13</td>
-                              </tr>
-                              <tr>
-                                <td>8º</td>
-                                <td></td>
-                                <td>Ichi de Hidra</td>
-                                <td>2</td>
-                                <td>0</td>
-                                <td>21</td>
-                                <td>48</td>
-                                <td>-27</td>
-                              </tr>
-                              <tr>
-                                <td>9º</td>
-                                <td></td>
-                                <td>Nachi de Lobo</td>
-                                <td>2</td>
-                                <td>0</td>
-                                <td>13</td>
-                                <td>54</td>
-                                <td>-41</td>
-                              </tr>
-                              <tr>
-                                <td>10º</td>
-                                <td></td>
-                                <td>Ban de Leão Menor</td>
-                                <td>2</td>
-                                <td>0</td>
-                                <td>10</td>
-                                <td>56</td>
-                                <td>-46</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="tabela_3rodada">
-                          <table id="tab_3rod" class="table table-condensed table-striped">
-                            <thead>
-                              <tr>
-                                <th>Posição</th>
-                                <th>Foto</th>
-                                <th>Cavaleiro</th>
-                                <th>Lutas</th>
-                                <th>Pontos</th>
-                                <th>Vt. Favor</th>
-                                <th>Vt. Contra</th>
-                                <th>Saldo de Cosmo</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1º</td>
-                                <td></td>
-                                <td>Hyoga de Cisne</td>
-                                <td>3</td>
-                                <td>9</td>
-                                <td>71</td>
-                                <td>40</td>
-                                <td>31</td>
-                              </tr>
-                              <tr>
-                                <td>2º</td>
-                                <td></td>
-                                <td>Ikki de Fênix</td>
-                                <td>3</td>
-                                <td>7</td>
-                                <td>77</td>
-                                <td>42</td>
-                                <td>35</td>
-                              </tr>
-                              <tr>
-                                <td>3º</td>
-                                <td></td>
-                                <td>Jabu de Unicórnio</td>
-                                <td>3</td>
-                                <td>6</td>
-                                <td>76</td>
-                                <td>39</td>
-                                <td>37</td>
-                              </tr>
-                              <tr>
-                                <td>4º</td>
-                                <td></td>
-                                <td>Shiryu de Dragão</td>
-                                <td>3</td>
-                                <td>6</td>
-                                <td>71</td>
-                                <td>49</td>
-                                <td>22</td>
-                              </tr>
-                              <tr>
-                                <td>5º</td>
-                                <td></td>
-                                <td>Seiya de Pégaso</td>
-                                <td>3</td>
-                                <td>6</td>
-                                <td>55</td>
-                                <td>50</td>
-                                <td>5</td>
-                              </tr>
-                              <tr>
-                                <td>6º</td>
-                                <td></td>
-                                <td>Shun de Andrômeda</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>72</td>
-                                <td>53</td>
-                                <td>19</td>
-                              </tr>
-                              <tr>
-                                <td>7º</td>
-                                <td></td>
-                                <td>Geki de Urso</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>45</td>
-                                <td>62</td>
-                                <td>-17</td>
-                              </tr>
-                              <tr>
-                                <td>8º</td>
-                                <td></td>
-                                <td>Ichi de Hidra</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>46</td>
-                                <td>66</td>
-                                <td>-20</td>
-                              </tr>
-                              <tr>
-                                <td>9º</td>
-                                <td></td>
-                                <td>Ban de Leão Menor</td>
-                                <td>3</td>
-                                <td>0</td>
-                                <td>28</td>
-                                <td>81</td>
-                                <td>-53</td>
-                              </tr>
-                              <tr>
-                                <td>10º</td>
-                                <td></td>
-                                <td>Nachi de Lobo</td>
-                                <td>3</td>
-                                <td>0</td>
-                                <td>26</td>
-                                <td>85</td>
-                                <td>-59</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="tabela_4rodada">
-                          <table id="tab_4rod" class="table table-condensed table-striped">
-                            <thead>
-                              <tr>
-                                <th>Posição</th>
-                                <th>Foto</th>
-                                <th>Cavaleiro</th>
-                                <th>Lutas</th>
-                                <th>Pontos</th>
-                                <th>Vt. Favor</th>
-                                <th>Vt. Contra</th>
-                                <th>Saldo de Cosmo</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1º</td>
-                                <td></td>
-                                <td>Ikki de Fênix</td>
-                                <td>4</td>
-                                <td>10</td>
-                                <td>108</td>
-                                <td>65</td>
-                                <td>43</td>
-                              </tr>
-                              <tr>
-                                <td>2º</td>
-                                <td></td>
-                                <td>Jabu de Unicórnio</td>
-                                <td>4</td>
-                                <td>9</td>
-                                <td>109</td>
-                                <td>49</td>
-                                <td>60</td>
-                              </tr>
-                              <tr>
-                                <td>3º</td>
-                                <td></td>
-                                <td>Shiryu de Dragão</td>
-                                <td>4</td>
-                                <td>9</td>
-                                <td>121</td>
-                                <td>79</td>
-                                <td>42</td>
-                              </tr>
-                              <tr>
-                                <td>4º</td>
-                                <td></td>
-                                <td>Hyoga de Cisne</td>
-                                <td>4</td>
-                                <td>9</td>
-                                <td>94</td>
-                                <td>71</td>
-                                <td>23</td>
-                              </tr>
-                              <tr>
-                                <td>5º</td>
-                                <td></td>
-                                <td>Shun de Andrômeda</td>
-                                <td>4</td>
-                                <td>7</td>
-                                <td>107</td>
-                                <td>63</td>
-                                <td>44</td>
-                              </tr>
-                              <tr>
-                                <td>6º</td>
-                                <td></td>
-                                <td>Seiya de Pégaso</td>
-                                <td>4</td>
-                                <td>6</td>
-                                <td>85</td>
-                                <td>100</td>
-                                <td>-15</td>
-                              </tr>
-                              <tr>
-                                <td>7º</td>
-                                <td></td>
-                                <td>Geki de Urso</td>
-                                <td>4</td>
-                                <td>3</td>
-                                <td>76</td>
-                                <td>97</td>
-                                <td>-21</td>
-                              </tr>
-                              <tr>
-                                <td>8º</td>
-                                <td></td>
-                                <td>Ichi de Hidra</td>
-                                <td>4</td>
-                                <td>3</td>
-                                <td>56</td>
-                                <td>101</td>
-                                <td>-45</td>
-                              </tr>
-                              <tr>
-                                <td>9º</td>
-                                <td></td>
-                                <td>Nachi de Lobo</td>
-                                <td>4</td>
-                                <td>3</td>
-                                <td>61</td>
-                                <td>116</td>
-                                <td>-55</td>
-                              </tr>
-                              <tr>
-                                <td>10º</td>
-                                <td></td>
-                                <td>Ban de Leão Menor</td>
-                                <td>4</td>
-                                <td>0</td>
-                                <td>38</td>
-                                <td>114</td>
-                                <td>-76</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-
-                    </div>
-
-
-
-                  </div>
-                </div>
-              </div>
-
-
-
-              <!-- SUPER LIGA GALÁCTICA
-              Dando uma pausa aos Concursos “QUERIDINHO”, estou apresentando a SUPER LIGA GALÁCTICA. Mudando o foco, o objetivo agora é definir quem é o “mais poderoso”! Só que desta vez estou propondo um sistema diferenciado de pontuação, similar ao Campeonato Brasileiro de Futebol. Todos os 10 Cavaleiros de Bronze que participaram da Guerra Galáctica, se enfrentarão entre si em nove rodadas consecutivas. O regramento é simples: a cada batalha divulgada aqui no grupo, opte por aquele Cavaleiro que é o mais poderoso em sua opinião! A pontuação será atribuída seguindo os seguintes critérios:
-              Vitória = 3 pontos para o vencedor
-              Empate = 1 ponto para ambos
-              Derrota = 0 pontos para o perdedor
-              INTERPRETAÇÃO TABELA DE CLASSIFICAÇÃO
-              LUTAS = Combates finalizados
-              PONTOS = Pontuação acumulada
-              VF = Votos à Favor (similar aos gols a favor em uma partida de futebol)
-              VC = Votos Contra (similar aos gols sofridos em uma partida de futebol)
-              SC = Saldo de Cosmo (diferença entre GP e GC, similar ao saldo de gols em um campeonato de futebol).
-              CRITÉRIOS DE DESEMPATE:
-              1º PONTOS
-              2º SC
-              3º VF
-              4º Confronto Direto
-              Por dia serão lançadas cinco lutas (uma rodada) e a votação se encerrará sempre ao
-              MEIO-DIA DO DIA SEGUINTE, quando então será lançada a próxima rodada de lutas,
-              até que todos os Cavaleiros tenham se enfrentado. Fiquem ligados aqui no grupo
-              para o lançamento das lutas. -->
             </div>
+
+
+
+            <!-- SUPER LIGA GALÁCTICA
+            Dando uma pausa aos Concursos “QUERIDINHO”, estou apresentando a SUPER LIGA GALÁCTICA. Mudando o foco, o objetivo agora é definir quem é o “mais poderoso”! Só que desta vez estou propondo um sistema diferenciado de pontuação, similar ao Campeonato Brasileiro de Futebol. Todos os 10 Cavaleiros de Bronze que participaram da Guerra Galáctica, se enfrentarão entre si em nove rodadas consecutivas. O regramento é simples: a cada batalha divulgada aqui no grupo, opte por aquele Cavaleiro que é o mais poderoso em sua opinião! A pontuação será atribuída seguindo os seguintes critérios:
+            Vitória = 3 pontos para o vencedor
+            Empate = 1 ponto para ambos
+            Derrota = 0 pontos para o perdedor
+            INTERPRETAÇÃO TABELA DE CLASSIFICAÇÃO
+            LUTAS = Combates finalizados
+            PONTOS = Pontuação acumulada
+            VF = Votos à Favor (similar aos gols a favor em uma partida de futebol)
+            VC = Votos Contra (similar aos gols sofridos em uma partida de futebol)
+            SC = Saldo de Cosmo (diferença entre GP e GC, similar ao saldo de gols em um campeonato de futebol).
+            CRITÉRIOS DE DESEMPATE:
+            1º PONTOS
+            2º SC
+            3º VF
+            4º Confronto Direto
+            Por dia serão lançadas cinco lutas (uma rodada) e a votação se encerrará sempre ao
+            MEIO-DIA DO DIA SEGUINTE, quando então será lançada a próxima rodada de lutas,
+            até que todos os Cavaleiros tenham se enfrentado. Fiquem ligados aqui no grupo
+            para o lançamento das lutas. -->
           </div>
-
-
         </div>
 
+
       </div>
+
     </div>
   </div>
+</div>
 </section>
 
 
@@ -1252,21 +969,21 @@
 
       <div class="col-md-4 centralizar">
 
-          <div>
-            <h4><strong><a href="#" >TOPO</a></strong></h4>
-          </div>
-          <div>
-            <p><strong><a href="#" >Bronze</a></strong></p>
-          </div>
-          <div>
-            <p><strong><a href="#" >Prata</a></strong></p>
-          </div>
-          <div>
-            <p><strong><a href="#" >Ouro</a></strong></p>
-          </div>
-          <div>
-            <p><strong><a href="#" >G.al Marina</a></strong></p>
-          </div>
+        <div>
+          <h4><strong><a href="#" >TOPO</a></strong></h4>
+        </div>
+        <div>
+          <p><strong><a href="#" >Bronze</a></strong></p>
+        </div>
+        <div>
+          <p><strong><a href="#" >Prata</a></strong></p>
+        </div>
+        <div>
+          <p><strong><a href="#" >Ouro</a></strong></p>
+        </div>
+        <div>
+          <p><strong><a href="#" >G.al Marina</a></strong></p>
+        </div>
 
       </div>
 
