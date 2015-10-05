@@ -37,6 +37,10 @@ p{
   margin: 30px;
 }*/
 
+.tabela_dados{
+  padding-top: 20px;
+}
+
 .tabela_dados table{
   /*margin-top: 10px;*/
   margin-bottom: 0px;
