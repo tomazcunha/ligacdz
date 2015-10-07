@@ -8,10 +8,13 @@
   <!--[if IE]>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <![endif]-->
+
   <title>Liga CDZ - Cavaleiros de Ouro</title>
+
   <link href="assets/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+
   <!-- GOOGLE FONT -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
@@ -32,12 +35,6 @@
   <script src="assets/plugins/bootstrap.js"></script>
   <script src="graficos/Chart.min.js"></script>
 
-
-  <script type="text/javascript">
-  var randomnb = function(){ return Math.round(Math.random()*300)};
-  </script>
-
-
   <!-- Highcharts -->
   <script src="http://code.highcharts.com/highcharts.js"></script>
   <script src="http://code.highcharts.com/modules/exporting.js"></script>
@@ -45,14 +42,14 @@
   <script src="assets/js/highcharts/exporting.js"></script>
 
   <!-- Dados dos gráficos -->
-  <script src="graficos/d_prata.js"></script>
+  <script src="graficos/d_ouro.js"></script>
 
   <!-- Meus Highcharts  -->
-  <script src="graficos/g-gran-pontos.js"></script>
-  <script src="graficos/g-gran-saldo-c.js"></script>
-  <script src="graficos/g-gran-votos-f.js"></script>
-  <script src="graficos/g-gran-votos-c.js"></script>
-  <script src="graficos/g-rodadas.js"></script>
+    <script src="graficos/g-gran-pontos.js"></script>
+    <script src="graficos/g-gran-saldo-c.js"></script>
+    <script src="graficos/g-gran-votos-f.js"></script>
+    <script src="graficos/g-gran-votos-c.js"></script>
+    <script src="graficos/g-rodadas.js"></script>
   <!--  -->
 
 
@@ -212,7 +209,7 @@
                               <h3 class="panel-title">Pontos</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_pontos_g3" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
+                              <div id="container_pontos_g3" class="g_grandes_ouro"></div>
                             </div>
                           </div>
                         </div>
@@ -223,7 +220,7 @@
                               <h3 class="panel-title">Saldo de Cosmo</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_saldo_g2" style="min-width: 140px; max-width: 800px; height: 350px; margin: 0 auto"></div>
+                              <div id="container_saldo_g2" class="g_grandes_ouro"></div>
                             </div>
                           </div>
                         </div>
@@ -240,7 +237,7 @@
                               <h3 class="panel-title">Votos a Favor</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_voto_f" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
+                              <div id="container_voto_f" class="g_grandes_ouro"></div>
                             </div>
                           </div>
                         </div>
@@ -251,7 +248,7 @@
                               <h3 class="panel-title">Votos Contra</h3>
                             </div>
                             <div class="panel-body">
-                              <div id="container_voto_c" style="min-width: 140px; max-width: auto; height: 350px; margin: 0 auto"></div>
+                              <div id="container_voto_c" class="g_grandes_ouro"></div>
                             </div>
                           </div>
                         </div>
@@ -288,6 +285,7 @@
                             <div class="row ">
                               <div class="col-md-12 col-menos-padding blocos-luta">
 
+                                <!--
                                 <div class="col-md-4">
                                   <div class="panel panel-default">
                                     <div class="panel-heading">
@@ -309,25 +307,26 @@
                                     </div>
                                   </div>
                                 </div>
+                                -->
 
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                   <div class="panel panel-default">
                                     <div class="panel-heading">
                                       <h3 class="panel-title">2ª Rodada </h3>
                                     </div>
                                     <div class="panel-body">
-                                      <div id="container_compac_r2" style="min-width: 330px; max-width: 800px; height: 250px; margin: 0 auto"></div>
+                                      <div id="container_compac_r2" class="g_lutas_ouro" ></div>
                                     </div>
                                   </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                   <div class="panel panel-default">
                                     <div class="panel-heading">
                                       <h3 class="panel-title">1ª Rodada </h3>
                                     </div>
                                     <div class="panel-body">
-                                      <div id="container_compac_r1" style="min-width: 330px; max-width: 800px; height: 250px; margin: 0 auto"></div>
+                                      <div id="container_compac_r1" class="g_lutas_ouro" ></div>
                                     </div>
                                   </div>
                                 </div>
@@ -346,555 +345,177 @@
                 </div>
 
 
-                <!-- Linha com as tabelas -->
-                <div class="row">
-                  <div class="col-md-12 col-menos-padding panel_head_alt">
-                    <div class="panel panel-default">
+                <!-- Tabela Geral -->
+                <div class="panel-group gm_grupo" id="accordion" role="tablist" aria-multiselectable="true">
 
-                      <div class="panel-heading botao_tabela">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-pills " role="tablist">
-                          <li role="presentation" class="active "><a href="#tabela_prata" aria-controls="tabela_prata" role="tab" data-toggle="tab">1ª Rodada</a></li>
-                          <li role="presentation" class=""><a href="#tabela_2rodada" aria-controls="tabela_2rodada" role="tab" data-toggle="tab">2ª Rodada</a></li>
-                          <li role="presentation" class=""><a href="#tabela_3rodada" aria-controls="tabela_3rodada" role="tab" data-toggle="tab">3ª Rodada</a></li>
-                          <li role="presentation" class=""><a href="#tabela_4rodada" aria-controls="tabela_4rodada" role="tab" data-toggle="tab">4ª Rodada</a></li>
-                        </ul>
+                  <!-- Linha para o Painel -->
+                  <div class="row">
+                    <div class="col-md-12 col-menos-padding gra-lutas-bronze panel_head_alt">
 
-                      </div>
+                      <!--  -->
+                      <div class="panel panel-default ">
 
-                      <div class="panel-body">
-
-                        <div class="tab-content tabela_dados">
-                          <div role="tabpanel" class="tab-pane active" id="tabela_prata">
-                            <table id="tab_prata" class="table table-condensed table-striped table-hover">
-                              <thead>
-                                <tr>
-                                  <th>Posição</th>
-                                  <th>Foto</th>
-                                  <th>Cavaleiro</th>
-                                  <th>Lutas</th>
-                                  <th>Pontos</th>
-                                  <th>Vt. Favor</th>
-                                  <th>Vt. Contra</th>
-                                  <th>Saldo de Cosmo</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1º</td>
-                                  <td> </td>
-                                  <td>Misty (Cavaleiro de Lagarto) </td>
-                                  <td >4</td>
-                                  <td >12</td>
-                                  <td >86</td>
-                                  <td >21</td>
-                                  <td >65</td>
-                                </tr>
-                                <tr><td>2º</td>
-                                  <td> </td>
-                                  <td>Albion (Cavaleiro de Cefeu)</td>
-                                  <td >4</td>
-                                  <td >12</td>
-                                  <td >69</td>
-                                  <td >32</td>
-                                  <td >37</td>
-                                </tr>
-                                <tr><td>3º</td>
-                                  <td> </td>
-                                  <td>Orfeu (Cavaleiro de Lira) </td>
-                                  <td >4</td>
-                                  <td >12</td>
-                                  <td >57</td>
-                                  <td >21</td>
-                                  <td >36</td>
-                                </tr>
-                                <tr><td>4º</td>
-                                  <td> </td>
-                                  <td>Capela (Cavaleiro de Cocheiro/Auriga)</td>
-                                  <td >4</td>
-                                  <td >10</td>
-                                  <td >60</td>
-                                  <td >27</td>
-                                  <td >33</td>
-                                </tr>
-                                <tr><td>5º</td>
-                                  <td> </td>
-                                  <td>Algol (Cavaleiro de Perseu)</td>
-                                  <td >4</td>
-                                  <td >9</td>
-                                  <td >75</td>
-                                  <td >24</td>
-                                  <td >51</td>
-                                </tr>
-                                <tr><td>6º</td>
-                                  <td> </td>
-                                  <td>Asterion (Cavaleiro de Cães de Caça)</td>
-                                  <td >4</td>
-                                  <td >9</td>
-                                  <td >56</td>
-                                  <td >17</td>
-                                  <td >39</td>
-                                </tr>
-                                <tr><td>7º</td>
-                                  <td> </td>
-                                  <td>Shaina (Amazona de Ofiúco) </td>
-                                  <td >4</td>
-                                  <td >7</td>
-                                  <td >32</td>
-                                  <td >39</td>
-                                  <td >-7</td>
-                                </tr>
-                                <tr><td>8º</td>
-                                  <td> </td>
-                                  <td>Algethi (Cavaleiro de Hércules)</td>
-                                  <td >4</td>
-                                  <td >6</td>
-                                  <td >56</td>
-                                  <td >78</td>
-                                  <td >-22</td>
-                                </tr>
-                                <tr><td>9º</td>
-                                  <td> </td>
-                                  <td>Dante (Cavaleiro de Cérbero) </td>
-                                  <td >4</td>
-                                  <td >3</td>
-                                  <td >32</td>
-                                  <td >36</td>
-                                  <td >-4</td>
-                                </tr>
-                                <tr><td>10º</td>
-                                  <td> </td>
-                                  <td>Babel (Cavaleiro de Centauro)</td>
-                                  <td >4</td>
-                                  <td >3</td>
-                                  <td >45</td>
-                                  <td >52</td>
-                                  <td >-7</td>
-                                </tr>
-                                <tr><td>11º</td>
-                                  <td> </td>
-                                  <td>Marin (Amazona de Águia) </td>
-                                  <td >4</td>
-                                  <td >3</td>
-                                  <td >43</td>
-                                  <td >52</td>
-                                  <td >-9</td>
-                                </tr>
-                                <tr><td>12º</td>
-                                  <td> </td>
-                                  <td>Tremy (Cavaleiro de Flecha/Sagita)</td>
-                                  <td >4</td>
-                                  <td >3</td>
-                                  <td >41</td>
-                                  <td >64</td>
-                                  <td >-23</td>
-                                </tr>
-                                <tr><td>13º</td>
-                                  <td> </td>
-                                  <td>Sirius (Cavaleiro de Cão Maior) </td>
-                                  <td >4</td>
-                                  <td >3</td>
-                                  <td >70</td>
-                                  <td >95</td>
-                                  <td >-25</td>
-                                </tr>
-                                <tr><td>14º</td>
-                                  <td> </td>
-                                  <td>Mouses (Cavaleiro de Baleia) </td>
-                                  <td >4</td>
-                                  <td >3</td>
-                                  <td >25</td>
-                                  <td >73</td>
-                                  <td >-48</td>
-                                </tr>
-                                <tr><td>15º</td>
-                                  <td> </td>
-                                  <td>Jamian (Cavaleiro de Corvo) </td>
-                                  <td >4</td>
-                                  <td >0</td>
-                                  <td >24</td>
-                                  <td >79</td>
-                                  <td >-55</td>
-                                </tr>
-                                <tr><td>16º</td>
-                                  <td> </td>
-                                  <td>Dio (Cavaleiro de Mosca) </td>
-                                  <td >4</td>
-                                  <td >0</td>
-                                  <td >12</td>
-                                  <td >73</td>
-                                  <td >-61</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-
-                          <div role="tabpanel" class="tab-pane" id="tabela_2rodada">
-                            <table id="tab_2rod" class="table table-condensed table-striped">
-                              <thead>
-                                <tr>
-                                  <th>Posição</th>
-                                  <th>Foto</th>
-                                  <th>Cavaleiro</th>
-                                  <th>Lutas</th>
-                                  <th>Pontos</th>
-                                  <th>Vt. Favor</th>
-                                  <th>Vt. Contra</th>
-                                  <th>Saldo de Cosmo</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1º</td>
-                                  <td></td>
-                                  <td>Jabu de Unicórnio</td>
-                                  <td>2</td>
-                                  <td>6</td>
-                                  <td>55</td>
-                                  <td>13</td>
-                                  <td>42</td>
-                                </tr>
-                                <tr>
-                                  <td>2º</td>
-                                  <td></td>
-                                  <td>Hyoga de Cisne</td>
-                                  <td>2</td>
-                                  <td>6</td>
-                                  <td>45</td>
-                                  <td>21</td>
-                                  <td>24</td>
-                                </tr>
-                                <tr>
-                                  <td>3º</td>
-                                  <td></td>
-                                  <td>Shun de Andrômeda</td>
-                                  <td>2</td>
-                                  <td>4</td>
-                                  <td>53</td>
-                                  <td>27</td>
-                                  <td>26</td>
-                                </tr>
-                                <tr>
-                                  <td>4º</td>
-                                  <td></td>
-                                  <td>Ikki de Fênix</td>
-                                  <td>2</td>
-                                  <td>4</td>
-                                  <td>46</td>
-                                  <td>29</td>
-                                  <td>17</td>
-                                </tr>
-                                <tr>
-                                  <td>5º</td>
-                                  <td></td>
-                                  <td>Shiryu de Dragão</td>
-                                  <td>2</td>
-                                  <td>3</td>
-                                  <td>45</td>
-                                  <td>28</td>
-                                  <td>17</td>
-                                </tr>
-                                <tr>
-                                  <td>6º</td>
-                                  <td></td>
-                                  <td>Seiya de Pégaso</td>
-                                  <td>2</td>
-                                  <td>3</td>
-                                  <td>33</td>
-                                  <td>32</td>
-                                  <td>1</td>
-                                </tr>
-                                <tr>
-                                  <td>7º</td>
-                                  <td></td>
-                                  <td>Geki de Urso</td>
-                                  <td>2</td>
-                                  <td>3</td>
-                                  <td>27</td>
-                                  <td>40</td>
-                                  <td>-13</td>
-                                </tr>
-                                <tr>
-                                  <td>8º</td>
-                                  <td></td>
-                                  <td>Ichi de Hidra</td>
-                                  <td>2</td>
-                                  <td>0</td>
-                                  <td>21</td>
-                                  <td>48</td>
-                                  <td>-27</td>
-                                </tr>
-                                <tr>
-                                  <td>9º</td>
-                                  <td></td>
-                                  <td>Nachi de Lobo</td>
-                                  <td>2</td>
-                                  <td>0</td>
-                                  <td>13</td>
-                                  <td>54</td>
-                                  <td>-41</td>
-                                </tr>
-                                <tr>
-                                  <td>10º</td>
-                                  <td></td>
-                                  <td>Ban de Leão Menor</td>
-                                  <td>2</td>
-                                  <td>0</td>
-                                  <td>10</td>
-                                  <td>56</td>
-                                  <td>-46</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-
-                          <div role="tabpanel" class="tab-pane" id="tabela_3rodada">
-                            <table id="tab_3rod" class="table table-condensed table-striped">
-                              <thead>
-                                <tr>
-                                  <th>Posição</th>
-                                  <th>Foto</th>
-                                  <th>Cavaleiro</th>
-                                  <th>Lutas</th>
-                                  <th>Pontos</th>
-                                  <th>Vt. Favor</th>
-                                  <th>Vt. Contra</th>
-                                  <th>Saldo de Cosmo</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1º</td>
-                                  <td></td>
-                                  <td>Hyoga de Cisne</td>
-                                  <td>3</td>
-                                  <td>9</td>
-                                  <td>71</td>
-                                  <td>40</td>
-                                  <td>31</td>
-                                </tr>
-                                <tr>
-                                  <td>2º</td>
-                                  <td></td>
-                                  <td>Ikki de Fênix</td>
-                                  <td>3</td>
-                                  <td>7</td>
-                                  <td>77</td>
-                                  <td>42</td>
-                                  <td>35</td>
-                                </tr>
-                                <tr>
-                                  <td>3º</td>
-                                  <td></td>
-                                  <td>Jabu de Unicórnio</td>
-                                  <td>3</td>
-                                  <td>6</td>
-                                  <td>76</td>
-                                  <td>39</td>
-                                  <td>37</td>
-                                </tr>
-                                <tr>
-                                  <td>4º</td>
-                                  <td></td>
-                                  <td>Shiryu de Dragão</td>
-                                  <td>3</td>
-                                  <td>6</td>
-                                  <td>71</td>
-                                  <td>49</td>
-                                  <td>22</td>
-                                </tr>
-                                <tr>
-                                  <td>5º</td>
-                                  <td></td>
-                                  <td>Seiya de Pégaso</td>
-                                  <td>3</td>
-                                  <td>6</td>
-                                  <td>55</td>
-                                  <td>50</td>
-                                  <td>5</td>
-                                </tr>
-                                <tr>
-                                  <td>6º</td>
-                                  <td></td>
-                                  <td>Shun de Andrômeda</td>
-                                  <td>3</td>
-                                  <td>4</td>
-                                  <td>72</td>
-                                  <td>53</td>
-                                  <td>19</td>
-                                </tr>
-                                <tr>
-                                  <td>7º</td>
-                                  <td></td>
-                                  <td>Geki de Urso</td>
-                                  <td>3</td>
-                                  <td>3</td>
-                                  <td>45</td>
-                                  <td>62</td>
-                                  <td>-17</td>
-                                </tr>
-                                <tr>
-                                  <td>8º</td>
-                                  <td></td>
-                                  <td>Ichi de Hidra</td>
-                                  <td>3</td>
-                                  <td>3</td>
-                                  <td>46</td>
-                                  <td>66</td>
-                                  <td>-20</td>
-                                </tr>
-                                <tr>
-                                  <td>9º</td>
-                                  <td></td>
-                                  <td>Ban de Leão Menor</td>
-                                  <td>3</td>
-                                  <td>0</td>
-                                  <td>28</td>
-                                  <td>81</td>
-                                  <td>-53</td>
-                                </tr>
-                                <tr>
-                                  <td>10º</td>
-                                  <td></td>
-                                  <td>Nachi de Lobo</td>
-                                  <td>3</td>
-                                  <td>0</td>
-                                  <td>26</td>
-                                  <td>85</td>
-                                  <td>-59</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-
-                          <div role="tabpanel" class="tab-pane" id="tabela_4rodada">
-                            <table id="tab_4rod" class="table table-condensed table-striped">
-                              <thead>
-                                <tr>
-                                  <th>Posição</th>
-                                  <th>Foto</th>
-                                  <th>Cavaleiro</th>
-                                  <th>Lutas</th>
-                                  <th>Pontos</th>
-                                  <th>Vt. Favor</th>
-                                  <th>Vt. Contra</th>
-                                  <th>Saldo de Cosmo</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1º</td>
-                                  <td></td>
-                                  <td>Ikki de Fênix</td>
-                                  <td>4</td>
-                                  <td>10</td>
-                                  <td>108</td>
-                                  <td>65</td>
-                                  <td>43</td>
-                                </tr>
-                                <tr>
-                                  <td>2º</td>
-                                  <td></td>
-                                  <td>Jabu de Unicórnio</td>
-                                  <td>4</td>
-                                  <td>9</td>
-                                  <td>109</td>
-                                  <td>49</td>
-                                  <td>60</td>
-                                </tr>
-                                <tr>
-                                  <td>3º</td>
-                                  <td></td>
-                                  <td>Shiryu de Dragão</td>
-                                  <td>4</td>
-                                  <td>9</td>
-                                  <td>121</td>
-                                  <td>79</td>
-                                  <td>42</td>
-                                </tr>
-                                <tr>
-                                  <td>4º</td>
-                                  <td></td>
-                                  <td>Hyoga de Cisne</td>
-                                  <td>4</td>
-                                  <td>9</td>
-                                  <td>94</td>
-                                  <td>71</td>
-                                  <td>23</td>
-                                </tr>
-                                <tr>
-                                  <td>5º</td>
-                                  <td></td>
-                                  <td>Shun de Andrômeda</td>
-                                  <td>4</td>
-                                  <td>7</td>
-                                  <td>107</td>
-                                  <td>63</td>
-                                  <td>44</td>
-                                </tr>
-                                <tr>
-                                  <td>6º</td>
-                                  <td></td>
-                                  <td>Seiya de Pégaso</td>
-                                  <td>4</td>
-                                  <td>6</td>
-                                  <td>85</td>
-                                  <td>100</td>
-                                  <td>-15</td>
-                                </tr>
-                                <tr>
-                                  <td>7º</td>
-                                  <td></td>
-                                  <td>Geki de Urso</td>
-                                  <td>4</td>
-                                  <td>3</td>
-                                  <td>76</td>
-                                  <td>97</td>
-                                  <td>-21</td>
-                                </tr>
-                                <tr>
-                                  <td>8º</td>
-                                  <td></td>
-                                  <td>Ichi de Hidra</td>
-                                  <td>4</td>
-                                  <td>3</td>
-                                  <td>56</td>
-                                  <td>101</td>
-                                  <td>-45</td>
-                                </tr>
-                                <tr>
-                                  <td>9º</td>
-                                  <td></td>
-                                  <td>Nachi de Lobo</td>
-                                  <td>4</td>
-                                  <td>3</td>
-                                  <td>61</td>
-                                  <td>116</td>
-                                  <td>-55</td>
-                                </tr>
-                                <tr>
-                                  <td>10º</td>
-                                  <td></td>
-                                  <td>Ban de Leão Menor</td>
-                                  <td>4</td>
-                                  <td>0</td>
-                                  <td>38</td>
-                                  <td>114</td>
-                                  <td>-76</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
+                        <div class="panel-heading" role="tab" id="heading1">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapseThree">
+                              <h3 class="panel-title btn btn-default botao_gm"> Somatório <span class="caret"></span></h3>
+                            </a>
+                          </h4>
                         </div>
 
+                        <div id="collapse2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                          <div class="panel-body lutas_head">
+
+                            <div class="tab-content tabela_dados">
+
+                              <table id="tab_4rod" class="table table-condensed table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Posição</th>
+                                    <th>Foto</th>
+                                    <th>Cavaleiro</th>
+                                    <th>Lutas</th>
+                                    <th>Pontos</th>
+                                    <th>Vt. Favor</th>
+                                    <th>Vt. Contra</th>
+                                    <th>Saldo de Cosmo</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1º</td>
+                                    <td> </td>
+                                    <td>Shaka de Virgem</td>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>93</td>
+                                    <td>33</td>
+                                    <td>60</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2º</td>
+                                    <td> </td>
+                                    <td>Dohko de Libra</td>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>87</td>
+                                    <td>40</td>
+                                    <td>47</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3º</td>
+                                    <td> </td>
+                                    <td>Aioros de Sagitário</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>68</td>
+                                    <td>38</td>
+                                    <td>30</td>
+                                  </tr>
+                                  <tr>
+                                    <td>4º</td>
+                                    <td> </td>
+                                    <td>Camus de Aquário</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>72</td>
+                                    <td>45</td>
+                                    <td>27</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5º</td>
+                                    <td> </td>
+                                    <td>Saga de Gêmeos</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>71</td>
+                                    <td>51</td>
+                                    <td>20</td>
+                                  </tr>
+                                  <tr>
+                                    <td>6º</td>
+                                    <td> </td>
+                                    <td>Mu de Áries</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>37</td>
+                                    <td>46</td>
+                                    <td>-9</td>
+                                  </tr>
+                                  <tr>
+                                    <td>7º</td>
+                                    <td> </td>
+                                    <td>Aldebaran de Touro</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>33</td>
+                                    <td>46</td>
+                                    <td>-13</td>
+                                  </tr>
+                                  <tr>
+                                    <td>8º</td>
+                                    <td> </td>
+                                    <td>Afrodite de Peixes</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>43</td>
+                                    <td>72</td>
+                                    <td>-29</td>
+                                  </tr>
+                                  <tr>
+                                    <td>9º</td>
+                                    <td> </td>
+                                    <td>Aioria de Leão</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>-20</td>
+                                  </tr>
+                                  <tr>
+                                    <td>10º</td>
+                                    <td> </td>
+                                    <td>Mascara da Morte de Câncer</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>40</td>
+                                    <td>67</td>
+                                    <td>-27</td>
+                                  </tr>
+                                  <tr>
+                                    <td>11º</td>
+                                    <td> </td>
+                                    <td>Miro de Escorpião</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>46</td>
+                                    <td>74</td>
+                                    <td>-28</td>
+                                  </tr>
+                                  <tr>
+                                    <td>12º</td>
+                                    <td> </td>
+                                    <td>Shura de Capricórnio</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>47</td>
+                                    <td>105</td>
+                                    <td>-58</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                            </div>
+
+
+                          </div>
+                        </div>
                       </div>
-
-
 
                     </div>
                   </div>
-                </div>
 
+                </div>
 
               </div>
             </div>
